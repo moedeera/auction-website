@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
 .main-container {
   min-height: 85vh;
   border: 3px solid green;
-  background-color: bisque;
+  background-color: #14213d;
 }
 
 .promotion {
@@ -10,9 +11,7 @@
   margin: 5px auto;
 }
 .recommendations {
-  height: fit-content;
-  background-color: aqua;
-  margin: 5px auto;
+  margin: 10px auto;
 }
 .items::-webkit-scrollbar {
   width: 0 !important;
@@ -21,44 +20,83 @@
 .items {
   height: 100%;
   display: flex;
+  gap: 5px;
 }
 div.items {
-  background-color: #333;
+  background-color: transparent;
   overflow: auto;
-  white-space: nowrap;
-  scrollbar-color: transparent;
+  /* white-space: nowrap; */
 }
 
 .posted-item {
+  height: 100%;
   display: grid;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 3fr 1fr;
   /* border: 4px solid goldenrod; */
-  padding-bottom: 5px;
+
+  color: black;
+  border: 1px solid rgba(128, 128, 128, 0.459);
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  background-color: whitesmoke;
 }
 .item-images {
-  padding: 10px 5px;
+  padding: 0 5px;
   align-items: center;
+  padding-top: 5px;
 }
 .item-images img {
   width: 300px;
-  height: 350px;
+  height: 340px;
   object-fit: cover;
+  border-radius: 5px;
 }
 .item-actions {
-  border: 1px solid steelblue;
 }
 .item-actions h3 {
   text-align: center;
 }
 .item-info {
-  border: 2px solid gold;
   display: flex;
-
+  color: black;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: 0 7px;
 }
 .item-info button {
   width: 100%;
   height: 3rem;
+  /* background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(52, 9, 121, 1) 0%,
+    rgba(132, 0, 255, 1) 100%
+  ); */
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(52, 9, 121, 1) 0%,
+    rgba(0, 35, 255, 1) 100%
+  );
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+.item-timer {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0 7px;
+  padding-bottom: 5px;
+}
+.item-info p {
+  color: crimson;
+  font-weight: 500;
+}
+.header {
+  height: 1.5rem;
 }
