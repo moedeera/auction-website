@@ -10,11 +10,20 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/main", require("./routes/main"));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../frontend/build")));
+  app.use(
+    express.static(path.join(__dirname, "../frontend/auction-site/build"))
+  );
 
   app.get("*", (req, res) =>
     res.sendFile(
-      path.resolve(__dirname, "../", "frontend", "build", "index.html")
+      path.resolve(
+        __dirname,
+        "../",
+        "frontend",
+        "auction-site",
+        "build",
+        "index.html"
+      )
     )
   );
 } else {
