@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
 .main-container {
   min-height: 85vh;
-  border: 1px solid rgba(128, 128, 128, 0.726);
-  background-color: #006494;
+  border: 1px solid rgba(128, 128, 128, 0.126);
+  background-color: whitesmoke;
 }
 
 .promotion {
@@ -31,15 +31,16 @@ div.items {
 
 .posted-item {
   height: 100%;
+
   display: grid;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
   /* border: 4px solid goldenrod; */
 
   color: black;
-  border: 1px solid rgba(128, 128, 128, 0.459);
+  border: 1px solid rgba(128, 128, 128, 0.259);
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
-  background-color: whitesmoke;
+  background-color: #a1cdf471;
 }
 .item-images {
   padding: 0 5px;
@@ -48,11 +49,15 @@ div.items {
 }
 .item-images img {
   width: 300px;
-  height: 340px;
+  height: auto;
   object-fit: cover;
   border-radius: 5px;
 }
 .item-actions {
+  /* border: 1px solid crimson; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .item-actions h3 {
   text-align: center;
