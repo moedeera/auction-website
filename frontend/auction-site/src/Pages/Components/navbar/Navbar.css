@@ -1,5 +1,101 @@
 .navbar {
-  background-color: aqua;
-  height: 10vh;
-  border: 3px solid crimson;
+  background-color: aliceblue;
+  height: auto;
+  /* border: 3px solid crimson; */
+  padding: 0 5px 5px;
+}
+
+.navbar i {
+  color: #14213d;
+  color: #006494;
+  font-size: 25px;
+}
+.navbar_Header {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-si-post {
+  width: 40%;
+  max-width: 200px;
+  /* border: 2px solid crimson; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-si-post h5 {
+  cursor: pointer;
+}
+/*search-bar*/
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #00b4cc;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+/* .wrap {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/***/
+.search-result {
+  padding: 5px 0px;
+  background-color: aliceblue;
+  width: calc(100% - 40px);
+}
+.result {
+  background-color: aliceblue;
+
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+.navbar_Options {
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+.btn-primary {
+  height: 2rem;
+  background: #006494;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 1.25px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
 }
