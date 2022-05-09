@@ -6,7 +6,10 @@
   height: 100%;
   display: flex;
   gap: 5px;
-  margin-left: 2.5px;
+  width: 100%;
+  /* border: 3px solid crimson; */
+  max-width: 1300px;
+  margin: 0 auto;
 }
 div.items {
   background-color: transparent;
@@ -46,7 +49,7 @@ div.items {
   justify-content: space-around;
 }
 .item-actions h3 {
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
 }
 .item-info {
@@ -86,7 +89,7 @@ div.items {
 .item-info p {
   color: crimson;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
 }
 .item-timer {
   height: 2rem;
@@ -94,7 +97,7 @@ div.items {
   align-items: center;
   padding: 0 7px;
   padding-bottom: 5px;
-  font-size: 14px;
+  font-size: 13px;
 }
 .header {
   height: 1.5rem;

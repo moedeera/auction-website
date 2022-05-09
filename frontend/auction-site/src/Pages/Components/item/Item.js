@@ -21,11 +21,11 @@ export const Item = () => {
     },
     {
       id: 2,
-      title: "Audi BMQ 2011",
-      price: "15,650$",
+      title: "Ford RRover 2017",
+      price: "11,150$",
       days: 2,
-      hours: 15,
-      pic: "https://cdn.pixabay.com/photo/2016/12/07/21/50/car-1890494_960_720.jpg",
+      hours: 8,
+      pic: "https://cdn.pixabay.com/photo/2020/06/04/22/43/range-rover-5260745_960_720.jpg",
     },
     {
       id: 3,
