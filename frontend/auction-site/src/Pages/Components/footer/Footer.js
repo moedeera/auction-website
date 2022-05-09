@@ -31,7 +31,7 @@ export const Footer = () => {
         <i className="fab fa-twitter fa-2x"></i>
         <i className="fab fa-instagram-square fa-2x"></i>
       </ul>
-      <small>Copyright &copy; 2018, All Right Reserved</small>
+      <small>Copyright &copy; 2022, All Right Reserved</small>
     </div>
   );
 };
