@@ -19,10 +19,10 @@ export const Navbar = () => {
           <div className="search">
             <input
               type="text"
-              class="searchTerm"
+              className="searchTerm"
               placeholder="What are you looking for?"
             />
-            <button type="submit" class="searchButton">
+            <button type="submit" className="searchButton">
               <i className="fa fa-search"></i>
             </button>
           </div>
