@@ -1,13 +1,13 @@
 .nav-container {
-  background-color: rgba(240, 248, 255, 0.589);
-  border-bottom: 1px solid #00b4cc9f;
+  width: 100%;
+  background-color: aliceblue;
 }
 .navbar {
   height: auto;
 
   /* border: 3px solid crimson; */
   padding: 0 5px 5px;
-  width: 100%;
+  /* width: 100%; */
   /* border: 3px solid crimson; */
   max-width: 1300px;
   margin: 0 auto;
@@ -48,7 +48,6 @@
 
 .searchTerm {
   width: 100%;
-
   border: 3px solid #00b4cc;
   border-right: none;
   padding: 5px;
