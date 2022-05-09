@@ -19,6 +19,10 @@
   color: #006494;
   color: white;
   font-size: 25px;
+  cursor: pointer;
+}
+.navbar h3 {
+  font-size: calc(18px + 0.2vw);
 }
 .navbar_Header {
   display: flex;
@@ -103,6 +107,9 @@
   display: flex;
   justify-content: space-evenly;
 }
+.navbar_Options-md {
+  display: none;
+}
 .btn-primary {
   height: 2rem;
   background: #00b4cc;
@@ -114,4 +121,14 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar_Options-md {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar_Options {
+    display: none;
+  }
 }

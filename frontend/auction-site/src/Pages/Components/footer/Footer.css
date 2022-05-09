@@ -2,7 +2,9 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  /* border: 2px solid goldenrod; */
+
+  width: 100%;
+  max-width: 1300px;
 }
 .footer-main h3 {
   color: grey;
@@ -36,10 +38,8 @@
   .footer-main {
     flex-direction: row;
     width: 100%;
-
+    margin: 100px auto;
     justify-content: space-between;
-    width: 100%;
-    max-width: 940px;
   }
   .footer-main ul {
     gap: 10px;

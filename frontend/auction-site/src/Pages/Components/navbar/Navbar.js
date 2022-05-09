@@ -38,6 +38,12 @@ export const Navbar = () => {
           <i className="fas fa-bell fa-2x"></i>
           <i className="fas fa-cog fa-2x"></i>
         </div>
+        <div className="navbar_Options-md">
+          <h4>Make Bids</h4>
+          <h4>Categories</h4>
+          <h4>Tracker</h4>
+          <h4>Services</h4>
+        </div>
       </div>
     </div>
   );
