@@ -17,14 +17,13 @@ export const Navbar = () => {
               <span style={{ color: "goldenrod" }}>Auc</span>tionaX
             </h3>
           </div>
-          <NavSearch size={"large"} />
+          {/* <NavSearch size={"large"} /> */}
           <div className="navbar-si-post">
             <h5>Sign in</h5>
             <button className="btn-primary">Post</button>
           </div>
         </div>
-        <NavSearch size={"medium"} />
-        <NavSearch size={"small"} />
+        {/* <NavSearch size={"medium"} /> */}
 
         <div className="navbar_Options">
           <i className="fas fa-shopping-cart fa-2x"></i>
@@ -32,6 +31,8 @@ export const Navbar = () => {
           <i className="fas fa-bell fa-2x"></i>
           <i className="fas fa-cog fa-2x"></i>
         </div>
+
+        {/* <NavSearch size={"small"} /> */}
         <div className="navbar_Options-md">
           <h4>Make Bids</h4>
           <h4>Categories</h4>

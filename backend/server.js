@@ -1,11 +1,17 @@
 const path = require("path");
 const express = require("express");
-
+const cors = require("cors");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 1660;
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.use("/main", require("./routes/main"));
 

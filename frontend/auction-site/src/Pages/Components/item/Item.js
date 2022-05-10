@@ -1,7 +1,34 @@
 import React from "react";
 import "./Item.css";
+import axios from "axios";
+import { useEffect, useMemo } from "react";
 
 export const Item = () => {
+  let fetchedData = null;
+  let loading = true;
+  let dataSet = null;
+
+  const fetch = async () => {
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      const res = await axios.get("/main");
+      fetchedData = res.data;
+      console.log(fetchedData);
+      //   setAuth(res.data);
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  };
+  useEffect(() => {
+    fetch();
+  }, []);
+
   const data = [
     {
       id: 0,

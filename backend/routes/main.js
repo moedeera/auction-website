@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const data = require("./Data");
 
 router.get("/", (req, res) => {
-  res.send("hello world from route '/'");
+  console.log(data);
+  res.send(data);
 });
 
 module.exports = router;

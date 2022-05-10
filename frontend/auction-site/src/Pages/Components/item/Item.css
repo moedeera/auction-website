@@ -9,7 +9,7 @@
   width: 100%;
   /* border: 3px solid crimson; */
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 20px auto 0;
 }
 div.items {
   background-color: transparent;
