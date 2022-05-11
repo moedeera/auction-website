@@ -50,7 +50,7 @@ const data = [
     days: 2,
     hours: 18,
     km: 70,
-    pic: "https://www.pexels.com/photo/classic-blue-sedan-near-green-leaf-trees-at-daytime-992067/",
+    pic: "https://images.pexels.com/photos/992067/pexels-photo-992067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
     type: "crossover",
     classic: true,
   },

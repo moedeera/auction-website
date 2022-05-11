@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Item.css";
 import axios from "axios";
 import { useEffect, useMemo } from "react";
+import { SiteContext } from "../../../Context/Context";
 
 export const Item = () => {
   let fetchedData = null;
-  let loading = true;
-  let dataSet = null;
-
+  const msg = useContext(SiteContext);
+  console.log(msg);
   const fetch = async () => {
     try {
       const config = {
