@@ -156,7 +156,7 @@ const data = [
     pic2: "https://cdn.pixabay.com/photo/2018/01/13/14/20/dump-truck-3080177_960_720.jpg",
     type: "heavy",
     classic: false,
-    sold: false,
+    sold: true,
     promoted: false,
   },
   {

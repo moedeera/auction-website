@@ -20,6 +20,7 @@ const fetchPromotedCars = async () => {
 };
 export const SiteContextProvider = ({ children }) => {
   const [promotedCars, setPromotedCars] = useState([]);
+  const [soldCars, setSoldCars] = useState([]);
   const [test1, setTest1] = useState("hello");
 
   useEffect(() => {
@@ -27,12 +28,13 @@ export const SiteContextProvider = ({ children }) => {
       const cars = await fetchPromotedCars();
 
       setPromotedCars(cars.filter((car) => car.sold === false));
+      setSoldCars(cars.filter((car) => car.sold === true));
     };
     getPromotedCars().catch(console.error);
   }, []);
 
   return (
-    <SiteContext.Provider value={{ test1, promotedCars }}>
+    <SiteContext.Provider value={{ test1, promotedCars, soldCars }}>
       {children}
     </SiteContext.Provider>
   );
