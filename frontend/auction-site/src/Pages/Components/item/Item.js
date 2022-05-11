@@ -8,7 +8,12 @@ export const Item = () => {
 
   return (
     <div className="container">
-      <div className="items-current">Current Listings</div>
+      <div
+        className="items-current"
+        style={{ color: "var(---color-secondary)" }}
+      >
+        <h3> Current Listings</h3>
+      </div>
 
       <div className="items">
         {" "}

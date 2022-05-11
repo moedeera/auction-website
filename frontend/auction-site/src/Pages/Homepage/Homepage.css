@@ -47,48 +47,9 @@
   gap: 10px;
   /* border: 2px solid orange; */
 }
-.sold-items {
-  background-color: white;
-  border: 1px solid rgba(128, 128, 128, 0.276);
-  border-radius: 5px;
-  padding-bottom: 5px;
-  max-width: 1300px;
-  margin: 0 auto;
-  font-family: "Fira Sans Condensed", sans-serif;
-  letter-spacing: 1.05px;
-}
-.sold-items-listing {
-  padding: 0 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
-}
-.sold-items-listing img {
-  width: 140px;
-}
-.sold-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  height: 200px;
-  border: 1px solid rgba(128, 128, 128, 0.234);
-  border-radius: 5px;
-  padding: 10px 5px 0;
-  /* background-color: var(--secondary-alternate); */
-}
-.sold-item h4,
-p {
-  /* border: 3px solid cadetblue; */
-  margin: 5px 0;
-}
+
 @media only screen and (min-width: 768px) {
   .promotion {
     display: none;
-  }
-
-  .sold-items-listing {
-    grid-template-columns: repeat(4, 1fr);
   }
 }

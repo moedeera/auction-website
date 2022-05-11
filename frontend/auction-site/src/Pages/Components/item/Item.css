@@ -2,7 +2,10 @@
 .items::-webkit-scrollbar {
   width: 0 !important;
 }
-
+.items-current h3 {
+  text-align: center;
+  color: var(---color-secondary);
+}
 .items {
   height: 100%;
   display: flex;

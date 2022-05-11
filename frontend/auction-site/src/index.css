@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;300;400;600;700&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -14,9 +15,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.btn-primary {
+  height: 2rem;
+  width: 50%;
+  background: var(--color-primary);
+  color: white;
+  font-size: 14px;
+  letter-spacing: 1.25px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-family: "Fira Sans Condensed", sans-serif;
+}
 
 .btn-secondary {
-  background-color: #00b4cc;
+  /* background-color: red; */
   height: 40px;
   width: 10rem;
   border: none;
@@ -27,18 +41,20 @@ code {
   cursor: pointer;
 }
 .btn-alternate {
-  background-color: goldenrod;
+  background-color: var(--color-brand);
   height: 40px;
   width: 15rem;
   border: none;
-  color: white;
+  color: var(--color-secondary);
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1.25px;
   cursor: pointer;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-family: "Fira Sans Condensed", sans-serif;
+  letter-spacing: 3px;
 }
 .navbar_Search {
   background: white;
@@ -72,4 +88,12 @@ code {
   padding: 5px;
   height: 2rem;
   color: rgba(0, 0, 0, 0.623);
+}
+@media only screen and (min-width: 768px) {
+  .btn-primary {
+    height: 3rem;
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 600;
+  }
 }

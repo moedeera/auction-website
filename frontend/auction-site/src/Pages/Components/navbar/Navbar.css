@@ -121,18 +121,6 @@
 .navbar_Options-md {
   display: none;
 }
-.btn-primary {
-  height: 2rem;
-  background: #00b4cc;
-  color: white;
-  font-size: 14px;
-  letter-spacing: 1.25px;
-  font-weight: 500;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-}
 
 .searchNresult {
 }
@@ -165,6 +153,14 @@
 
   .navbar-sm {
     display: none;
+  }
+  .navbar-si-post {
+    max-width: 300px;
+    /* border: 3px solid green; */
+  }
+  .navbar-si-post h5 {
+    font-size: 14px;
+    /* padding: 0; */
   }
 }
 @media only screen and (min-width: 992px) {
