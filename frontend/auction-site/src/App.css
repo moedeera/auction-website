@@ -6,6 +6,24 @@
   height: 40vmin;
   pointer-events: none;
 }
+:root {
+  /* --color-bg: #1f1f38; */
+  --color-bg: #080f0fb6;
+  /* --color-bg-variant: #2c2c6c; */
+  --color-bg-variant: #36486b;
+
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: white;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --transition: all 400ms ease;
+  --container-width-lg: 1300px;
+
+  /*Social media*/
+  --color-primary: #058ed9;
+  --color-secondary: #006494;
+  --primary-alternate: #00b4cc;
+  --secondary-alternate: #a1cdf471;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

@@ -14,7 +14,7 @@ export const Navbar = () => {
             ></i>
 
             <h3>
-              <span style={{ color: "goldenrod" }}>Auc</span>tionaX
+              <span style={{ color: "gold" }}>Auc</span>tionaX
             </h3>
           </div>
           {/* <NavSearch size={"large"} /> */}
