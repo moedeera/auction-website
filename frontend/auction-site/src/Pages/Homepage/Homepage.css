@@ -69,10 +69,10 @@
   align-items: center;
   text-align: center;
   height: 200px;
-  border: 1px solid rgba(128, 128, 128, 0.134);
+  border: 1px solid rgba(128, 128, 128, 0.534);
   border-radius: 5px;
   padding: 10px 5px 0;
-  background-color: var(--secondary-alternate);
+  /* background-color: var(--secondary-alternate); */
 }
 .sold-item h4,
 p {
