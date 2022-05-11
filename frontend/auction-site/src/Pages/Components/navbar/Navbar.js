@@ -1,5 +1,9 @@
 import React from "react";
 import "./Navbar.css";
+import settings from "./settings.png";
+import bell from "./bell.png";
+import cart from "./cart.png";
+import brand from "./brand.png";
 import { NavSearch } from "./NavSearch";
 
 export const Navbar = () => {
@@ -26,10 +30,10 @@ export const Navbar = () => {
         {/* <NavSearch size={"medium"} /> */}
 
         <div className="navbar_Options">
-          <i className="fas fa-shopping-cart fa-2x"></i>
-          <i className="fab fa-buysellads fa-2x"></i>
-          <i className="fas fa-bell fa-2x"></i>
-          <i className="fas fa-cog fa-2x"></i>
+          <img src={cart} alt="" />
+          <img src={brand} alt="" />
+          <img src={bell} alt="" />
+          <img src={settings} alt="" />
         </div>
 
         {/* <NavSearch size={"small"} /> */}

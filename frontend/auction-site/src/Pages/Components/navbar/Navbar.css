@@ -1,28 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;300;400;600;700&display=swap");
 .nav-container {
   width: 100%;
   overflow-x: hidden;
-  background-color: #006494;
-
+  background-color: white;
   height: 110px;
   overflow-y: hidden;
   position: sticky;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 .navbar {
   /* border: 3px solid crimson; */
   padding: 0 5px 5px;
   /* width: 100%; */
   /* border: 3px solid crimson; */
-  max-width: 1300px;
+  max-width: var(--container-width-lg);
   margin: 0 auto;
-  color: white;
+
+  color: var(--color-secondary);
 }
 .navbar > div {
 }
 .navbar i {
   color: #14213d;
   color: #006494;
-  color: white;
+  color: var(--color-secondary);
   font-size: 25px;
+  cursor: pointer;
+}
+.navbar_Options img {
+  width: 35px;
   cursor: pointer;
 }
 .navbar h3 {
@@ -32,8 +38,9 @@
 .navbar_Header {
   display: flex;
   justify-content: space-between;
-  /* border: 1px solid orange; */
+
   width: 100%;
+  letter-spacing: 1.25px;
 }
 .navbar_title {
   display: flex;

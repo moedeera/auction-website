@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;300;400;600;700&display=swap");
 .container {
   width: 100%;
   max-width: var(--container-width-lg);
   margin: 5px auto;
   border: 1px solid rgba(128, 128, 128, 0.273);
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 .main-container {
   min-height: 85vh;
@@ -13,7 +15,7 @@
 }
 
 .promotion {
-  background-color: #058ed9;
+  background-color: var(--color-primary);
   padding: 0 5px;
   height: fit-content;
   margin: 5px auto 0;
@@ -47,11 +49,13 @@
 }
 .sold-items {
   background-color: white;
-  border: 1px solid rgba(128, 128, 128, 0.376);
+  border: 1px solid rgba(128, 128, 128, 0.276);
   border-radius: 5px;
   padding-bottom: 5px;
   max-width: 1300px;
   margin: 0 auto;
+  font-family: "Fira Sans Condensed", sans-serif;
+  letter-spacing: 1.05px;
 }
 .sold-items-listing {
   padding: 0 5px;
@@ -69,7 +73,7 @@
   align-items: center;
   text-align: center;
   height: 200px;
-  border: 1px solid rgba(128, 128, 128, 0.534);
+  border: 1px solid rgba(128, 128, 128, 0.234);
   border-radius: 5px;
   padding: 10px 5px 0;
   /* background-color: var(--secondary-alternate); */

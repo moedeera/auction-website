@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;300;400;600;700&display=swap");
 .App {
   text-align: center;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .App-logo {
@@ -22,7 +24,7 @@
   --color-primary: #058ed9;
   --color-secondary: #006494;
   --primary-alternate: #00b4cc;
-  --secondary-alternate: #a1cdf471;
+  --secondary-alternate: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {

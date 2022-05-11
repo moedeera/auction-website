@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;300;400;600;700&display=swap");
 .items::-webkit-scrollbar {
   width: 0 !important;
 }
@@ -10,6 +11,7 @@
   /* border: 3px solid crimson; */
   max-width: 1300px;
   margin: 0 auto;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 div.items {
   background-color: transparent;
@@ -28,7 +30,7 @@ div.items {
   border: 1px solid rgba(128, 128, 128, 0.259);
   border-radius: 5px;
   font-family: "Roboto", sans-serif;
-  background-color: #a1cdf471;
+  background-color: var(--secondary-alternate);
   padding: 10px 0;
 }
 .item-images {
@@ -77,20 +79,21 @@ div.items {
     rgba(0, 35, 255, 1) 100%
   ); */
   /* box-shadow: 2px 5px 0 rgba(55, 51, 115, 0.3); */
-  background: var(--color-secondary);
+  background: var(--color-primary);
 
   color: white;
   font-size: 18px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.75px;
   font-weight: 700;
 
   border: none;
   cursor: pointer;
   padding: 0 16px;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .item-info p {
-  color: crimson;
+  color: rgb(49, 104, 150);
   font-weight: 700;
   font-size: 14px;
 }
