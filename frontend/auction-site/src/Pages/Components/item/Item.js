@@ -1,97 +1,15 @@
 import React, { useContext } from "react";
 import "./Item.css";
-import axios from "axios";
-import { useEffect, useMemo } from "react";
+
 import { SiteContext } from "../../../Context/Context";
 
 export const Item = () => {
-  let fetchedData = null;
-  const msg = useContext(SiteContext);
-  console.log(msg);
-  const fetch = async () => {
-    try {
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-
-      const res = await axios.get("/main");
-      fetchedData = res.data;
-      console.log(fetchedData);
-      //   setAuth(res.data);
-    } catch (error) {
-      console.log(error);
-      return null;
-    }
-  };
-  useEffect(() => {
-    fetch();
-  }, []);
-
-  const data = [
-    {
-      id: 0,
-      title: "Audi BMQ 2011",
-      price: "15,650$",
-      days: 2,
-      hours: 15,
-      pic: "https://cdn.pixabay.com/photo/2016/12/07/21/50/car-1890494_960_720.jpg",
-    },
-    {
-      id: 1,
-      title: "BMW AMG 2014",
-      price: "19,650$",
-      days: 3,
-      hours: 1,
-      pic: "https://cdn.pixabay.com/photo/2017/03/27/14/56/auto-2179220_960_720.jpg",
-    },
-    {
-      id: 2,
-      title: "Ford RRover 2017",
-      price: "11,150$",
-      days: 2,
-      hours: 8,
-      pic: "https://cdn.pixabay.com/photo/2020/06/04/22/43/range-rover-5260745_960_720.jpg",
-    },
-    {
-      id: 3,
-      title: "Audi BMQ 2011",
-      price: "15,650$",
-      days: 2,
-      hours: 15,
-      pic: "https://cdn.pixabay.com/photo/2016/12/07/21/50/car-1890494_960_720.jpg",
-    },
-    {
-      id: 4,
-      title: "Audi BMQ 2011",
-      price: "15,650$",
-      days: 2,
-      hours: 15,
-      pic: "https://cdn.pixabay.com/photo/2016/12/07/21/50/car-1890494_960_720.jpg",
-    },
-    {
-      id: 5,
-      title: "Audi BMQ 2011",
-      price: "15,650$",
-      days: 2,
-      hours: 15,
-      pic: "https://cdn.pixabay.com/photo/2016/12/07/21/50/car-1890494_960_720.jpg",
-    },
-    {
-      id: 6,
-      title: "Audi BMQ 2011",
-      price: "15,650$",
-      days: 2,
-      hours: 15,
-      pic: "https://cdn.pixabay.com/photo/2016/12/07/21/50/car-1890494_960_720.jpg",
-    },
-  ];
+  const { test1, promotedCars } = useContext(SiteContext);
 
   return (
     <div className="items">
       {" "}
-      {data.map((item) => (
+      {promotedCars.map((item) => (
         <div className="posted-item" key={item.id}>
           <div className="item-images">
             <img src={item.pic} alt="" />

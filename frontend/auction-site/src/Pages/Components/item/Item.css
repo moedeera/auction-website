@@ -37,8 +37,10 @@ div.items {
   padding-top: 5px;
 }
 .item-images img {
-  width: 200px;
-  height: 120px;
+  min-width: 200px;
+  min-height: 120px;
+  max-width: 200px;
+  max-height: 120px;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -49,7 +51,7 @@ div.items {
   justify-content: space-around;
 }
 .item-actions h3 {
-  font-size: 14px;
+  font-size: calc(12px + 0.25vw);
   text-align: left;
 }
 .item-info {
@@ -74,7 +76,7 @@ div.items {
     rgba(52, 9, 121, 1) 0%,
     rgba(0, 35, 255, 1) 100%
   );
-  box-shadow: 2px 5px 0 rgba(55, 51, 115, 0.3);
+  /* box-shadow: 2px 5px 0 rgba(55, 51, 115, 0.3); */
   background: #006494;
   color: white;
   font-size: 18px;
@@ -88,7 +90,7 @@ div.items {
 
 .item-info p {
   color: crimson;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
 }
 .item-timer {

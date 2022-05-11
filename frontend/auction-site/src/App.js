@@ -4,13 +4,14 @@ import { Homepage } from "./Pages/Homepage/Homepage";
 import { Navbar } from "./Pages/Components/navbar/Navbar";
 import Navbar2 from "./Pages/Components/navbar/Navbar2";
 import { Footer } from "./Pages/Components/footer/Footer";
-import { SiteContext } from "./Context/Context";
+import { SiteContextProvider } from "./Context/Context";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   const data = dataBase;
 
   return (
-    <SiteContext.Provider value={"hello"}>
+    <SiteContextProvider>
       <div className="">
         <div>
           <Navbar />
@@ -24,7 +25,7 @@ function App() {
         </Router>
         <Footer />
       </div>
-    </SiteContext.Provider>
+    </SiteContextProvider>
   );
 }
 
