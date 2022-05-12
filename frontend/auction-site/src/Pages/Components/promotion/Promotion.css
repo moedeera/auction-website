@@ -49,6 +49,8 @@
     background-color: var(--color-secondary);
     color: aliceblue;
     border-radius: 5px;
+    transition: 500ms ease-in-out;
+    animation: opacityAnimation 2s;
   }
   .promotion-lg img {
     width: 130px;
@@ -62,5 +64,15 @@
   }
   .promotion-info-lg h3 {
     margin: 0;
+  }
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
