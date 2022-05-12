@@ -41,7 +41,7 @@ const data = [
     brand: "Ford",
     year: 2017,
     price: "11,150$",
-    price: 11150,
+    cost: 11150,
     days: 2,
     hours: 8,
     hrs: null,

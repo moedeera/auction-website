@@ -4,15 +4,13 @@ import "./Item.css";
 import { SiteContext } from "../../../Context/Context";
 
 export const Item = () => {
-  const { test1, promotedCars } = useContext(SiteContext);
+  const { promotedCars } = useContext(SiteContext);
 
   return (
     <div className="container">
-      <div
-        className="items-current"
-        style={{ color: "var(---color-secondary)" }}
-      >
-        <h3> Current Listings</h3>
+      <div className="items-current">
+        <h3> Current Auctions</h3>
+        <p>See All</p>
       </div>
 
       <div className="items">
@@ -24,13 +22,25 @@ export const Item = () => {
             </div>
             <div className="item-actions">
               <div className="item-info header">
-                <h3>{item.title}</h3>
-                <p>{item.price}</p>
+                <h3 style={{ margin: "0" }}>{item.title}</h3>
+                <p style={{ margin: "0" }}>{item.price}</p>
               </div>
               <div className="item-timer">
-                <p>
-                  {item.days} days and {item.hours} hours left on this bid
-                </p>
+                {/* <p>
+                  {item.days} days {item.hours} hours left on bid
+                </p> */}
+                <div className="time-unit">
+                  <h3 style={{ margin: "0" }}>{item.days}</h3>
+                  <p style={{ margin: "0" }}>Days</p>
+                </div>
+                <div className="time-unit">
+                  <h3 style={{ margin: "0" }}>{item.hours}</h3>
+                  <p style={{ margin: "0" }}>Hours</p>
+                </div>
+                <div className="time-unit">
+                  <h3 style={{ margin: "0" }}>{item.hours + 27}</h3>
+                  <p style={{ margin: "0" }}>Minutes</p>
+                </div>
               </div>
               <div className="item-info">
                 <button>Place a bid</button>

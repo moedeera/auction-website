@@ -13,8 +13,13 @@
 .promotion-info h5 {
   line-height: 1.8em;
 }
+.promotion-images {
+  transition: 500ms ease-in-out;
+  animation: svgAnimation 500ms;
+}
 .promotion-images img {
   height: 100%;
+
   /* border: 2px solid green; */
 }
 .promotion-info {
@@ -49,11 +54,15 @@
     background-color: var(--color-secondary);
     color: aliceblue;
     border-radius: 5px;
-    transition: 500ms ease-in-out;
-    animation: opacityAnimation 2s;
+    transition: 800ms ease-in-out;
+    animation: opacityAnimation 5s;
+    overflow-x: hidden;
+    cursor: pointer;
   }
   .promotion-lg img {
     width: 130px;
+    transition: 500ms ease-in-out;
+    animation: svgAnimation 500ms;
   }
   .promotion-info-lg {
     /* border: 3px solid green; */
@@ -65,14 +74,38 @@
   .promotion-info-lg h3 {
     margin: 0;
   }
+  .promotion-lg:hover {
+    transform: scale(1.01);
+    opacity: 0.9;
+    overflow-x: auto;
+  }
 }
 
 @keyframes opacityAnimation {
   0% {
     opacity: 0.25;
   }
-
+  25% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  55% {
+    opacity: 0.85;
+  }
+  70% {
+    opacity: 0.75;
+  }
   100% {
     opacity: 1;
+  }
+}
+@keyframes svgAnimation {
+  0% {
+    transform: translateX(-90px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

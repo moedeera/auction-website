@@ -19,6 +19,7 @@
   --color-light: rgba(255, 255, 255, 0.6);
   --transition: all 400ms ease;
   --container-width-lg: 1300px;
+  --container-width-md: 900px;
 
   /*Social media*/
   --color-brand: gold;
