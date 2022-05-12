@@ -128,6 +128,7 @@ div.items {
   justify-content: space-evenly;
   padding: 7px;
   padding-bottom: 5px;
+  text-align: center;
 }
 .header {
 }
@@ -160,4 +161,6 @@ div.items {
 }
 .time-unit p {
   font-weight: 700;
+  text-align: center;
+  font-size: 12px;
 }
