@@ -5,6 +5,7 @@ import { Navbar } from "./Pages/Components/navbar/Navbar";
 import Navbar2 from "./Pages/Components/navbar/Navbar2";
 import { Footer } from "./Pages/Components/footer/Footer";
 import { SiteContextProvider } from "./Context/Context";
+import { MenuModals } from "./Pages/Components/modals/Menu/MenuModals";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <SiteContextProvider>
       <div className="">
         <div>
+          <MenuModals />
           <Navbar />
           <Navbar2 placeholder="Search for a car..." data={data} />
         </div>

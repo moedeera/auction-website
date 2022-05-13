@@ -22,6 +22,7 @@ export const SiteContextProvider = ({ children }) => {
   const [promotedCars, setPromotedCars] = useState([]);
   const [soldCars, setSoldCars] = useState([]);
   const [test1, setTest1] = useState("hello");
+  const [menuModal, setMenuModal] = useState(false);
 
   useEffect(() => {
     const getPromotedCars = async () => {
@@ -34,7 +35,9 @@ export const SiteContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <SiteContext.Provider value={{ test1, promotedCars, soldCars }}>
+    <SiteContext.Provider
+      value={{ test1, promotedCars, soldCars, menuModal, setMenuModal }}
+    >
       {children}
     </SiteContext.Provider>
   );

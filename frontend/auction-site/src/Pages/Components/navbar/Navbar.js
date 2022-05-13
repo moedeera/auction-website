@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import settings from "./settings.png";
 import bell from "./bell.png";
 import cart from "./cart.png";
 import brand from "./brand.png";
 import { NavSearch } from "./NavSearch";
+import { MenuModals } from "../modals/Menu/MenuModals";
+import { SiteContext } from "../../../Context/Context";
 
 export const Navbar = () => {
+  const { menuModal, setMenuModal } = useContext(SiteContext);
+
+  const openMenu = () => {
+    setMenuModal(true);
+  };
   return (
     <div className="nav-container">
       <div className="navbar">
@@ -30,7 +37,13 @@ export const Navbar = () => {
         {/* <NavSearch size={"medium"} /> */}
 
         <div className="navbar_Options">
-          <img src={cart} alt="" />
+          <img
+            src={cart}
+            alt=""
+            onClick={() => {
+              setMenuModal(true);
+            }}
+          />
           <img src={brand} alt="" />
           <img src={bell} alt="" />
           <img src={settings} alt="" />
@@ -44,6 +57,7 @@ export const Navbar = () => {
           <h4>Services</h4>
         </div>
       </div>
+      <MenuModals selection={"hello"} />
     </div>
   );
 };
