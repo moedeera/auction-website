@@ -45,6 +45,7 @@ div.items {
   font-family: "Roboto", sans-serif;
   background-color: var(--secondary-alternate);
   padding: 10px 0;
+  box-shadow: 1px 1px 0 rgba(55, 51, 115, 0.3);
 }
 .item-images {
   padding: 0 5px;

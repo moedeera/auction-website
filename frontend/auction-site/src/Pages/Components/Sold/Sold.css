@@ -1,6 +1,6 @@
 .sold-items {
   background-color: white;
-  border: 1px solid rgba(128, 128, 128, 0.276);
+  border: 1px solid rgba(128, 128, 128, 0.376);
   border-radius: 5px;
   padding-bottom: 5px;
   max-width: 1300px;
@@ -24,14 +24,16 @@
   align-items: center;
   text-align: center;
   height: 200px;
-  border: 1px solid rgba(128, 128, 128, 0.234);
+  border: 1px solid rgba(128, 128, 128, 0.634);
   border-radius: 5px;
   padding: 10px 5px 0;
+  box-shadow: 1px 1px 0 rgba(55, 51, 115, 0.3);
   /* background-color: var(--secondary-alternate); */
 }
 .sold-item h4,
 p {
   /* border: 3px solid cadetblue; */
+  color: var(--color-secondary);
   margin: 5px 0;
 }
 

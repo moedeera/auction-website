@@ -30,7 +30,7 @@ export const Item = () => {
                   {item.days} days {item.hours} hours left on bid
                 </p> */}
                 <div className="time-unit">
-                  <h3 style={{ margin: "0" }}>{item.days}</h3>
+                  <h3 style={{ margin: "0" }}>0{item.days}</h3>
                   <p style={{ margin: "0" }}>Days</p>
                 </div>
                 <div className="time-unit">

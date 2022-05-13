@@ -7,6 +7,7 @@ export const Sold = ({ soldCars }) => {
       <h3
         style={{
           textAlign: "center",
+          color: "var(--color-secondary)",
         }}
       >
         Sold Items
