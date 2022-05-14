@@ -9,7 +9,7 @@ import { MenuModals } from "../modals/Menu/MenuModals";
 import { SiteContext } from "../../../Context/Context";
 
 export const Navbar = () => {
-  const { menuModal, setMenuModal } = useContext(SiteContext);
+  const { menuModal, setMenuModal, menu, setMenu } = useContext(SiteContext);
 
   const openMenu = () => {
     setMenuModal(true);
@@ -42,11 +42,63 @@ export const Navbar = () => {
             alt=""
             onClick={() => {
               setMenuModal(true);
+              setMenu([
+                "Sedans",
+                "Trucks",
+                "SUVs",
+                "Sport",
+                "Classic",
+                "Heavy",
+                "Popular",
+              ]);
             }}
           />
-          <img src={brand} alt="" />
-          <img src={bell} alt="" />
-          <img src={settings} alt="" />
+          <img
+            src={brand}
+            alt=""
+            onClick={() => {
+              setMenuModal(true);
+              setMenu([
+                "Toyota",
+                "Honda",
+                "Ford",
+                "GM",
+                "Mitsubishi",
+                "Jeep",
+                "Dodge",
+              ]);
+            }}
+          />
+          <img
+            src={bell}
+            alt=""
+            onClick={() => {
+              setMenuModal(true);
+              setMenu([
+                "Newsletter",
+                "Promotions",
+                "Partnerships",
+                "Live Auction Events",
+                "Auto shows",
+                "Blog",
+                "Advertise",
+              ]);
+            }}
+          />
+          <img
+            src={settings}
+            alt=""
+            onClick={() => {
+              setMenuModal(true);
+              setMenu([
+                "Login",
+                "Account",
+                "Privacy",
+                "Terms and Conditions",
+                "Report stolen vehicles",
+              ]);
+            }}
+          />
         </div>
 
         {/* <NavSearch size={"small"} /> */}
