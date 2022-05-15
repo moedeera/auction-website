@@ -61,11 +61,14 @@ export const Navbar = () => {
               setMenu([
                 "Toyota",
                 "Honda",
+                "Cheverolet",
                 "Ford",
-                "GM",
+                "Mercedes-Benz",
+                "Audi",
                 "Mitsubishi",
                 "Jeep",
                 "Dodge",
+                "Acura",
               ]);
             }}
           />

@@ -15,6 +15,7 @@
   -ms-animation: fadeIn 1s;
 }
 .menu-modal {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -24,6 +25,15 @@
 .modal h3 {
   margin: 5px 0;
 }
+.modal h3 {
+  font-size: x-large;
+}
+.modal p {
+  font-size: 16px;
+}
+.modal li {
+  font-size: 18px;
+}
 .menu-modal-top {
   display: flex;
 
@@ -32,9 +42,11 @@
 }
 .modal-close {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
 
-  padding: 7px;
+  padding: 5px;
   border-radius: 50%;
   border: 1px solid grey;
   color: var(--color-secondary);
@@ -44,7 +56,7 @@
 }
 .top-info {
   margin-left: 15px;
-  width: 45%;
+  width: 55%;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid grey;
