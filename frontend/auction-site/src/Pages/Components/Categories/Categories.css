@@ -119,10 +119,11 @@
     margin-top: 10px;
     cursor: pointer;
     transition: 500ms ease-in-out;
+    transform: scale(0.99);
   }
   .ad2:hover {
     opacity: 0.8;
-    transform: scale(1.001);
+    transform: scale(1);
   }
   .ad-sm {
     display: none;
