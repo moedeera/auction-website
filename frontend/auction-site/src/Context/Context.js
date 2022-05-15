@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 export const SiteContext = createContext({});
-const fetchPromotedCars = async () => {
+const fetchCars = async () => {
   try {
     const config = {
       headers: {
@@ -21,6 +21,7 @@ const fetchPromotedCars = async () => {
 export const SiteContextProvider = ({ children }) => {
   const [promotedCars, setPromotedCars] = useState([]);
   const [soldCars, setSoldCars] = useState([]);
+  const [currentCars, setCurrentCars] = useState([]);
   const [test1, setTest1] = useState("hello");
   const [menuModal, setMenuModal] = useState(false);
   const [menu, setMenu] = useState([
@@ -35,10 +36,11 @@ export const SiteContextProvider = ({ children }) => {
 
   useEffect(() => {
     const getPromotedCars = async () => {
-      const cars = await fetchPromotedCars();
+      const cars = await fetchCars();
 
-      setPromotedCars(cars.filter((car) => car.sold === false));
+      setPromotedCars(cars.filter((car) => car.promoted === true));
       setSoldCars(cars.filter((car) => car.sold === true));
+      setCurrentCars(cars.filter((car) => !car.sold && !car.promoted));
     };
     getPromotedCars().catch(console.error);
   }, []);
@@ -53,6 +55,7 @@ export const SiteContextProvider = ({ children }) => {
         setMenuModal,
         menu,
         setMenu,
+        currentCars,
       }}
     >
       {children}

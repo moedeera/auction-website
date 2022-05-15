@@ -6,11 +6,20 @@
   grid-template-columns: 1fr;
   border: 1px solid green;
 }
+.current-listings p {
+  overflow-x: hidden;
+}
 
+.current-item img {
+  width: 50%;
+}
 .categories {
   border: 3px solid crimson;
+  overflow-x: hidden;
 }
 .categories h3,
+.current-listings h3,
+.current-listings p,
 .categories p {
   margin: 0;
 }
@@ -37,5 +46,9 @@
 
   .secondary-advertisements {
     display: block;
+  }
+
+  .current-listings.container.items {
+    background-color: aqua;
   }
 }

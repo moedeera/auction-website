@@ -3,20 +3,29 @@ import "./Item.css";
 
 import { SiteContext } from "../../../Context/Context";
 
-export const Item = () => {
-  const { promotedCars } = useContext(SiteContext);
+export const Item = ({ selection }) => {
+  const { promotedCars, currentCars } = useContext(SiteContext);
+
+  let cars;
+
+  if (selection === "promoted") {
+    cars = promotedCars;
+  } else {
+    cars = currentCars;
+  }
 
   return (
     <div className="container">
       <div className="items-current">
-        <h3> Current Auctions</h3>
+        {selection === "current" && <h3> Currently bidding</h3>}
+        {selection === "promoted" && <h3> Featured Auctions</h3>}
         <p>See All</p>
       </div>
 
-      <div className="items">
+      <div className="items ">
         {" "}
-        {promotedCars.map((item) => (
-          <div className="posted-item" key={item.id}>
+        {cars.map((item) => (
+          <div className="posted-item current" key={item.id}>
             <div className="item-images">
               <img src={item.pic} alt="" />
             </div>

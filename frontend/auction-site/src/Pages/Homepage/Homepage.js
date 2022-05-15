@@ -12,8 +12,9 @@ export const Homepage = () => {
   return (
     <div className="main-container">
       <Promotion pic1={pic1} />
-      <Item />
+      <Item selection={"promoted"} />
       <Sold soldCars={soldCars} />
+
       <Categories />
     </div>
   );
