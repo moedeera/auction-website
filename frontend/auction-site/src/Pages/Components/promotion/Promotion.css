@@ -80,32 +80,3 @@
     overflow-x: auto;
   }
 }
-
-@keyframes opacityAnimation {
-  0% {
-    opacity: 0.25;
-  }
-  25% {
-    opacity: 0.85;
-  }
-  50% {
-    opacity: 0.75;
-  }
-  55% {
-    opacity: 0.85;
-  }
-  70% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes svgAnimation {
-  0% {
-    transform: translateX(-90px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}

@@ -26,6 +26,9 @@
   margin: 0 auto;
   font-family: "Fira Sans Condensed", sans-serif;
 }
+.items-lg {
+  display: none;
+}
 .current {
   background-color: aqua;
 }
@@ -167,4 +170,10 @@ div.items {
   font-weight: 700;
   text-align: center;
   font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .items-lg {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

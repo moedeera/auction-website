@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import "./Categories.css";
 import adGif from "./advertisement.gif";
 import adGif2 from "./ad2.gif";
+import ad3 from "./ad3.png";
+import ad4 from "./ad-g.png";
 import { Context } from "react";
 import { SiteContext, SiteContextProvider } from "../../../Context/Context";
 import { Item } from "../item/Item";
@@ -15,30 +17,43 @@ export const Categories = () => {
       <div className="categories">
         <div className="current-listings">
           <div className="current-item">
+            <div className="ad-sm">
+              {" "}
+              <img src={ad4} alt="" width={"65%"} />
+            </div>
             <Item selection={"current"} />
           </div>
+          <div className="ad-sm">
+            {" "}
+            <img src={ad3} alt="" width={"100%"} />
+          </div>
+          <Item selection={"current"} size={true} />
         </div>
-        <h3>Categories</h3>
-        <p>Categories</p>
+        <div className="current-item-header">
+          <h3 className="current-item-h3">Categories</h3>
+          <p className="current-item-p">Browse all</p>
+        </div>
+
         <div className="categories-listings">
           <div className="category" id="sedan">
-            Sedans
+            <h3>Sedans</h3>
           </div>
           <div className="category" id="truck">
-            Trucks
+            <h3>Trucks</h3>
           </div>
           <div className="category" id="SUV">
-            SUVs
+            <h3>SUV</h3>
           </div>
-          <div className="category" id="crossover">
-            Crossovers
+          <div className="category" id="sport">
+            <h3>Sport</h3>
           </div>
         </div>
-        <img src={adGif2} alt="" width={"100%"} />
+        <img src={adGif2} alt="" className="ad2" />
       </div>
       <div className="secondary-advertisements">
         <div className="featured-item">
           <img src={adGif} alt="" />
+          <img src={ad3} alt="" />
         </div>
       </div>
     </div>
