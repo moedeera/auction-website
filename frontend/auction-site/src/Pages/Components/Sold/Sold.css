@@ -9,25 +9,25 @@
   letter-spacing: 1.05px;
 }
 .sold-items-listing {
-  padding: 0 5px;
+  padding: 5px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
 }
 .sold-items-listing img {
-  width: 140px;
+  width: 150px;
 }
 .sold-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   height: 200px;
   border: 1px solid rgba(128, 128, 128, 0.634);
   border-radius: 5px;
-  padding: 10px 5px 0;
-  box-shadow: 1px 1px 0 rgba(55, 51, 115, 0.3);
+  padding: 5px 0px;
+  box-shadow: 1px 1px 0px rgba(55, 51, 115, 0.2);
   /* background-color: var(--secondary-alternate); */
 }
 .sold-item h4,

@@ -19,13 +19,13 @@ export const Categories = () => {
           <div className="current-item">
             <div className="ad-sm">
               {" "}
-              <img src={ad4} alt="" width={"65%"} />
+              <img src={ad4} alt="" width={"45%"} />
             </div>
             <Item selection={"current"} />
           </div>
           <div className="ad-sm">
             {" "}
-            <img src={ad3} alt="" width={"100%"} />
+            <img src={ad3} alt="" height={"250px"} />
           </div>
           <Item selection={"current"} size={true} />
         </div>
@@ -42,10 +42,16 @@ export const Categories = () => {
             <h3>Trucks</h3>
           </div>
           <div className="category" id="SUV">
-            <h3>SUV</h3>
+            <h3>SUVs</h3>
           </div>
           <div className="category" id="sport">
             <h3>Sport</h3>
+          </div>
+          <div className="category" id="classic">
+            <h3>Classic</h3>
+          </div>
+          <div className="category" id="heavy">
+            <h3>Heavy</h3>
           </div>
         </div>
         <img src={adGif2} alt="" className="ad2" />
