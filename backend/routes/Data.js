@@ -356,7 +356,7 @@ const data = [
     pic2: "https://www.motorious.com/content/images/2020/08/1993-Mazda-RX-7-2.jpg",
     type: "sport",
     classic: false,
-    sold: false,
+    sold: true,
     promoted: false,
   },
 ];
