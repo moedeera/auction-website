@@ -305,6 +305,24 @@ const data = [
     sold: false,
     promoted: false,
   },
+  {
+    id: 17,
+    title: "Chevy Malibu 2015",
+    brand: "Chevrolet",
+    year: 2015,
+    price: "12,150$",
+    cost: 10150,
+    days: 02,
+    hours: 22,
+    km: 202,
+    hrs: null,
+    pic: "https://cdn.pixabay.com/photo/2020/06/04/19/44/chevy-5260229_960_720.jpg",
+    pic2: "https://cdn.ebizautos.media/used-2016-chevrolet-malibu-4drsedanpremierw2lz-13706-19230268-1-640.jpg",
+    type: "sedan",
+    classic: false,
+    sold: false,
+    promoted: false,
+  },
 ];
 
 module.exports = data;
