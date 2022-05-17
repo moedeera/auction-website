@@ -6,6 +6,7 @@ import Navbar2 from "./Pages/Components/navbar/Navbar2";
 import { Footer } from "./Pages/Components/footer/Footer";
 import { SiteContextProvider } from "./Context/Context";
 import { MenuModals } from "./Pages/Components/modals/Menu/MenuModals";
+import { AppHeader } from "./Pages/Components/AppHeader/AppHeader";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <div>
           <MenuModals />
           <Navbar />
+          <AppHeader />
           <Navbar2 placeholder="Search for a car..." data={data} />
         </div>
 

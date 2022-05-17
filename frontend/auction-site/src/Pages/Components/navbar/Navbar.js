@@ -105,12 +105,12 @@ export const Navbar = () => {
         </div>
 
         {/* <NavSearch size={"small"} /> */}
-        <div className="navbar_Options-md">
+        {/* <div className="navbar_Options-md">
           <h4>Make Bids</h4>
           <h4>Categories</h4>
           <h4>Tracker</h4>
           <h4>Services</h4>
-        </div>
+        </div> */}
       </div>
       <MenuModals selection={"hello"} />
     </div>

@@ -16,7 +16,7 @@ export const MenuModals = () => {
           <div className="top-info">
             {menu[0] === "Sedans" && (
               <>
-                <h3>Shopping</h3>
+                <h3>Shop for Bids</h3>
                 <p>See all in Bids</p>
               </>
             )}{" "}
@@ -28,8 +28,8 @@ export const MenuModals = () => {
             )}
             {menu[0] === "Newsletter" && (
               <>
-                <h3>Get Notified</h3>
-                <p>See all links</p>
+                <h3>Notices</h3>
+                <p>Track bids</p>
               </>
             )}
             {menu[0] === "Login" && (

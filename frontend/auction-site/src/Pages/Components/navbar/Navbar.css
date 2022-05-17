@@ -5,7 +5,7 @@
   overflow-x: hidden;
   background-color: white;
   height: 100px;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   position: sticky;
   font-family: "Fira Sans Condensed", sans-serif;
 }
@@ -129,12 +129,21 @@
 
 @media only screen and (min-width: 768px) {
   .nav-container {
-    height: 90px;
+    height: 60px;
+    /* border: 3px solid crimson; */
   }
   .navbar_Options-md {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
+    /* border: 3px solid green; */
+  }
+
+  .navbar_dropDown {
+    background-color: #14213d;
+    z-index: 888;
+    position: absolute;
+    height: 900px;
   }
   .navbar_Options-md h4 {
     padding: 3px 7px;
@@ -180,5 +189,6 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    border: 3px solid green;
   }
 }

@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
 export const SiteContext = createContext({});
+
 const fetchCars = async () => {
   try {
     const config = {
@@ -18,6 +19,7 @@ const fetchCars = async () => {
     return null;
   }
 };
+
 export const SiteContextProvider = ({ children }) => {
   const [promotedCars, setPromotedCars] = useState([]);
   const [soldCars, setSoldCars] = useState([]);
@@ -42,6 +44,7 @@ export const SiteContextProvider = ({ children }) => {
       setSoldCars(cars.filter((car) => car.sold === true));
       setCurrentCars(cars.filter((car) => !car.sold && !car.promoted));
     };
+
     getPromotedCars().catch(console.error);
   }, []);
 

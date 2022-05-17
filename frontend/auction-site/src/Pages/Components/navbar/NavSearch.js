@@ -37,28 +37,31 @@ export const NavSearch = ({ size }) => {
       )}
 
       {size === "large" && (
-        <div className="navbar-lg">
-          <div className="searchNresult">
-            <div className="navbar_Search">
-              <i className="fas fa-search"></i>
+        <>
+          <div style={{ color: "white" }}>Hello</div>
+          <div className="navbar-lg">
+            <div className="searchNresult">
+              <div className="navbar_Search">
+                <i className="fas fa-search"></i>
 
-              <input type="text" placeholder="Start searching " />
+                <input type="text" placeholder="Start searching " />
 
-              <select>
-                <option>All vehicles</option>
-                <option>Sedan</option>
-                <option>Trucks</option>
-                <option>SUVS</option>
-                <option>Sport</option>
-                <option>Heavy</option>
-              </select>
+                <select>
+                  <option>All vehicles</option>
+                  <option>Sedan</option>
+                  <option>Trucks</option>
+                  <option>SUVS</option>
+                  <option>Sport</option>
+                  <option>Heavy</option>
+                </select>
+              </div>
             </div>
+            <div>
+              <button className="btn-secondary">Search</button>
+            </div>
+            <div></div>
           </div>
-          <div>
-            <button className="btn-secondary">Search</button>
-          </div>
-          <div></div>
-        </div>
+        </>
       )}
     </>
   );
