@@ -6,6 +6,7 @@ import { Sold } from "../Components/Sold/Sold";
 import { Promotion } from "../Components/promotion/Promotion.js";
 import { SiteContext } from "../../Context/Context";
 import { Categories } from "../Components/Categories/Categories";
+import { Slider } from "../Components/Slider/Slider";
 
 export const Homepage = () => {
   const { soldCars } = useContext(SiteContext);
@@ -14,6 +15,7 @@ export const Homepage = () => {
       <Promotion pic1={pic1} />
       <Item selection={"promoted"} />
       <Sold soldCars={soldCars} />
+      {/* <Slider /> */}
 
       <Categories />
     </div>
