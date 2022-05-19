@@ -4,7 +4,8 @@
   margin: 20px auto 0;
   display: grid;
   grid-template-columns: 1fr;
-
+  border: 1px solid rgba(128, 128, 128, 0.437);
+  padding: 0 5px;
   font-family: "Fira Sans Condensed", sans-serif;
 }
 .current-listings p {

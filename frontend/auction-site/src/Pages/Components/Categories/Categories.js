@@ -7,6 +7,7 @@ import ad4 from "./ad-g.png";
 import { Context } from "react";
 import { SiteContext, SiteContextProvider } from "../../../Context/Context";
 import { Item } from "../item/Item";
+import { Slider } from "../Slider/Slider";
 
 export const Categories = () => {
   const { currentCars } = useContext(SiteContext);
@@ -27,7 +28,7 @@ export const Categories = () => {
             {" "}
             <img src={ad3} alt="" height={"250px"} />
           </div>
-          <Item selection={"current"} size={true} />
+          {/* <Item selection={"current"} size={true} /> */}
         </div>
         <div className="current-item-header">
           <h3 className="current-item-h3">Categories</h3>

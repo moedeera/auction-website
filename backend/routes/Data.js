@@ -366,7 +366,7 @@ const data = [
     year: 2020,
     price: "34,350$",
     cost: 34350,
-    days: 10,
+    days: 9,
     hours: 10,
     km: 102,
     hrs: null,

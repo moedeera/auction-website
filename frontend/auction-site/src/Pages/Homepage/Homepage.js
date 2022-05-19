@@ -15,7 +15,7 @@ export const Homepage = () => {
       <Promotion pic1={pic1} />
       <Item selection={"promoted"} />
       <Sold soldCars={soldCars} />
-      {/* <Slider /> */}
+      <Slider />
 
       <Categories />
     </div>
