@@ -23,7 +23,7 @@ export const Slider = () => {
           <div
             className="arrow"
             id="arrow-left"
-            style={!slide ? { opacity: "0.2" } : { opacity: "1" }}
+            style={slide ? { opacity: "0.2" } : { opacity: "1" }}
           >
             <i
               className="fa fa-chevron-left"
@@ -35,7 +35,7 @@ export const Slider = () => {
           <div
             className="arrow"
             id="arrow-right"
-            style={slide ? { opacity: "0.2" } : { opacity: "1" }}
+            style={!slide ? { opacity: "0.2" } : { opacity: "1" }}
           >
             <i
               className="fa fa-chevron-right"
