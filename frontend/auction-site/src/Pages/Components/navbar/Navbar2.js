@@ -54,7 +54,11 @@ function Navbar2({ placeholder, data }) {
               {filteredData.slice(0, 15).map((value, key) => {
                 return (
                   <p
-                    style={{ textTransform: "capitalize" }}
+                    style={
+                      value.name.length > 3
+                        ? { textTransform: "capitalize" }
+                        : { textTransform: "uppercase" }
+                    }
                     key={key}
                     onClick={() => {
                       setWordEntered(value.name);
