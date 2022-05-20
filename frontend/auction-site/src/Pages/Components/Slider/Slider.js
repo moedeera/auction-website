@@ -28,7 +28,7 @@ export const Slider = () => {
             <i
               className="fa fa-chevron-left"
               onClick={() => {
-                move();
+                !slide && move();
               }}
             ></i>
           </div>
@@ -40,7 +40,7 @@ export const Slider = () => {
             <i
               className="fa fa-chevron-right"
               onClick={() => {
-                move();
+                slide && move();
               }}
             ></i>
           </div>

@@ -53,8 +53,8 @@ input:focus {
 }
 
 .dataResult {
-  color: brown;
-  margin-top: 0px;
+  color: var(--color-primary);
+  padding-left: 10px;
   margin: 0 auto;
   width: 95%;
   height: 200px;
@@ -64,6 +64,9 @@ input:focus {
   overflow-y: auto;
   max-width: 570px;
   border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.8em;
 }
 
 .dataResult::-webkit-scrollbar {
@@ -82,6 +85,7 @@ input:focus {
 
 .dataItem p {
   margin-left: 10px;
+  color: black;
 }
 a {
   text-decoration: none;

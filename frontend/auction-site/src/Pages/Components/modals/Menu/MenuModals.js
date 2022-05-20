@@ -50,8 +50,8 @@ export const MenuModals = () => {
         </div>
 
         <ul>
-          {menu.map((item) => (
-            <li>{item}</li>
+          {menu.map((item, index) => (
+            <li key={index}>{item}</li>
           ))}
         </ul>
       </div>

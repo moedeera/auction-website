@@ -27,6 +27,10 @@ function App() {
             <Route path="/" element={<Homepage />} />
           </Routes>
         </Router>
+
+
+
+        
         <Footer />
       </div>
     </SiteContextProvider>

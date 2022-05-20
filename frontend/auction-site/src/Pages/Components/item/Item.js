@@ -5,7 +5,7 @@ import { SiteContext } from "../../../Context/Context";
 
 export const Item = ({ selection, size }) => {
   const { promotedCars, currentCars } = useContext(SiteContext);
-  console.log(promotedCars);
+
   let cars;
 
   if (selection === "promoted") {

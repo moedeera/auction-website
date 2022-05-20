@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Navbar2.css";
+import { SiteContext } from "../../../Context/Context";
 
 function Navbar2({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
-
+  const { brands } = useContext(SiteContext);
+  console.log(brands);
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);
-    const newFilter = data.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
+    const newFilter = brands.filter((value) => {
+      return value.name.toLowerCase().includes(searchWord.toLowerCase());
     });
 
     if (searchWord === "") {
@@ -51,9 +53,15 @@ function Navbar2({ placeholder, data }) {
             <div className="dataResult">
               {filteredData.slice(0, 15).map((value, key) => {
                 return (
-                  <a className="dataItem" href={value.link} key={key}>
-                    <p>{value.title} </p>
-                  </a>
+                  <p
+                    style={{ textTransform: "capitalize" }}
+                    key={key}
+                    onClick={() => {
+                      setWordEntered(value.name);
+                    }}
+                  >
+                    {value.name}{" "}
+                  </p>
                 );
               })}
             </div>

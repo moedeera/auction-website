@@ -11,7 +11,6 @@ import { Slider } from "../Slider/Slider";
 
 export const Categories = () => {
   const { currentCars } = useContext(SiteContext);
-  console.log(currentCars);
 
   return (
     <div className="categories-container">
