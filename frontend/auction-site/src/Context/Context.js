@@ -89,7 +89,7 @@ export const SiteContextProvider = ({ children }) => {
 
   const getBid = async (id) => {
     const currentBid = await fetchBid(id);
-    console.log(currentBid);
+
     setBid(currentBid);
   };
 

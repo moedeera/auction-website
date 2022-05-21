@@ -4,12 +4,13 @@ import settings from "./settings.png";
 import bell from "./bell.png";
 import cart from "./cart.png";
 import brand from "./brand.png";
-import { NavSearch } from "./NavSearch";
-import { MenuModals } from "../modals/Menu/MenuModals";
-import { SiteContext } from "../../../Context/Context";
 
+// import { MenuModals } from "../modals/Menu/MenuModals";
+// import { SiteContext } from "../../../Context/Context";
+import { SiteContext } from "../../Context/Context";
+import { MenuModals } from "../modals/Menu/MenuModals";
 export const Navbar = () => {
-  const { menuModal, setMenuModal, menu, setMenu } = useContext(SiteContext);
+  const { setMenuModal, setMenu } = useContext(SiteContext);
 
   const openMenu = () => {
     setMenuModal(true);

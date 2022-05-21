@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import "./Slider.css";
 import pic1 from "./ad01.jpg";
 
-import { SiteContext } from "../../../Context/Context";
+import { SiteContext } from "../../Context/Context";
 
 export const Slider = () => {
   const [slide, moveSlide] = useState(true);

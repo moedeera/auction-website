@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./MenuModal.css";
-import { Context } from "react";
-import { SiteContext } from "../../../../Context/Context";
+
+import { SiteContext } from "../../../Context/Context";
 
 export const MenuModals = () => {
-  const { menuModal, setMenuModal, menu, setMenu } = useContext(SiteContext);
+  const { menuModal, setMenuModal, menu } = useContext(SiteContext);
 
   if (!menuModal) {
     return;

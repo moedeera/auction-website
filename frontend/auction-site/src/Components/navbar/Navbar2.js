@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Navbar2.css";
-import { SiteContext } from "../../../Context/Context";
+
+import { SiteContext } from "../../Context/Context";
 
 function Navbar2({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);

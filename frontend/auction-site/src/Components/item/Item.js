@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./Item.css";
 
-import { SiteContext } from "../../../Context/Context";
+import { SiteContext } from "../../Context/Context";
 
 export const Item = ({ selection, size }) => {
   const { promotedCars, currentCars } = useContext(SiteContext);

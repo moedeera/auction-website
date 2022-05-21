@@ -4,14 +4,10 @@ import adGif from "./advertisement.gif";
 import adGif2 from "./ad2.gif";
 import ad3 from "./ad3.png";
 import ad4 from "./ad-g.png";
-import { Context } from "react";
-import { SiteContext, SiteContextProvider } from "../../../Context/Context";
+
 import { Item } from "../item/Item";
-import { Slider } from "../Slider/Slider";
 
 export const Categories = () => {
-  const { currentCars } = useContext(SiteContext);
-
   return (
     <div className="categories-container">
       <div className="categories">

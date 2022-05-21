@@ -6,10 +6,13 @@ import { SiteContext } from "../../Context/Context";
 
 export const Bid = () => {
   let { id } = useParams();
+
   const { getBid, bid } = useContext(SiteContext);
+
   useEffect(() => {
     getBid(id);
   }, []);
+
   console.log(bid);
   return (
     <div className="container">
