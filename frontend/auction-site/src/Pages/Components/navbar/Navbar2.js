@@ -6,7 +6,7 @@ function Navbar2({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
   const [wordEntered, setWordEntered] = useState("");
   const { brands } = useContext(SiteContext);
-  console.log(brands);
+
   const handleFilter = (event) => {
     const searchWord = event.target.value;
     setWordEntered(searchWord);

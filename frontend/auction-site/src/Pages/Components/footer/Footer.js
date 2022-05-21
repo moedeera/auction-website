@@ -3,7 +3,7 @@ import "./Footer.css";
 
 export const Footer = () => {
   return (
-    <>
+    <div className="footer-container">
       <div className="footer">
         <nav className="footer-main">
           <ul>
@@ -34,6 +34,6 @@ export const Footer = () => {
         </ul>
       </div>{" "}
       <p className="small">Copyright &copy; 2022, All Right Reserved</p>
-    </>
+    </div>
   );
 };

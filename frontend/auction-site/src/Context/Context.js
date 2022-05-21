@@ -39,6 +39,23 @@ const fetchBrands = async () => {
   }
 };
 
+const fetchBid = async (identifier) => {
+  try {
+    const config = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    };
+
+    const res = await axios.get(`/bids/${identifier}`);
+    return res.data;
+    //   setAuth(res.data);
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
 export const SiteContextProvider = ({ children }) => {
   const [promotedCars, setPromotedCars] = useState([]);
   const [soldCars, setSoldCars] = useState([]);
@@ -55,6 +72,7 @@ export const SiteContextProvider = ({ children }) => {
     "Popular",
   ]);
   const [brands, setBrands] = useState([]);
+  const [bid, setBid] = useState({});
   useEffect(() => {
     const getPromotedCars = async () => {
       const cars = await fetchCars();
@@ -69,6 +87,12 @@ export const SiteContextProvider = ({ children }) => {
     getPromotedCars().catch(console.error);
   }, []);
 
+  const getBid = async (id) => {
+    const currentBid = await fetchBid(id);
+    console.log(currentBid);
+    setBid(currentBid);
+  };
+
   return (
     <SiteContext.Provider
       value={{
@@ -81,6 +105,8 @@ export const SiteContextProvider = ({ children }) => {
         setMenu,
         currentCars,
         brands,
+        getBid,
+        bid,
       }}
     >
       {children}

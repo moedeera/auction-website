@@ -7,6 +7,7 @@ import { Footer } from "./Pages/Components/footer/Footer";
 import { SiteContextProvider } from "./Context/Context";
 import { MenuModals } from "./Pages/Components/modals/Menu/MenuModals";
 import { AppHeader } from "./Pages/Components/AppHeader/AppHeader";
+import { Bid } from "./Pages/Bid/Bid";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
@@ -25,12 +26,10 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/bid/:id" element={<Bid />} />
           </Routes>
         </Router>
 
-
-
-        
         <Footer />
       </div>
     </SiteContextProvider>

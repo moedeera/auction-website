@@ -14,6 +14,7 @@ app.use(
 );
 
 app.use("/main", require("./routes/main"));
+app.use("/bids", require("./routes/bids"));
 
 if (process.env.NODE_ENV === "production") {
   app.use(
