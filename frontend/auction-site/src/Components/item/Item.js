@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import "./Item.css";
+import { useNavigate } from "react-router-dom";
 
 import { SiteContext } from "../../Context/Context";
 
@@ -55,7 +56,13 @@ export const Item = ({ selection, size }) => {
                         </div>
                       </div>
                       <div className="item-info">
-                        <button>Place a bid</button>
+                        <button
+                          onClick={() => {
+                            alert("hey");
+                          }}
+                        >
+                          Place a bid
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -105,7 +112,13 @@ export const Item = ({ selection, size }) => {
                         </div>
                       </div>
                       <div className="item-info">
-                        <button>Place a bid</button>
+                        <button
+                          onClick={() => {
+                            alert("hello");
+                          }}
+                        >
+                          Place a bid
+                        </button>
                       </div>
                     </div>
                   </div>
