@@ -49,12 +49,10 @@ export const Bid = () => {
           </div>
 
           <div className="bid-images">
-            <img src={bid?.pic} alt="" />
+            <img src={bid?.pic} alt="" style={{ width: "100%" }} />
             <div className="bid-images-grid">
               <img src={bid?.pic} alt="" className="image-select" />
-              <img src={bid?.pic} alt="" />
-              <img src={bid?.pic} alt="" />
-              <img src={bid?.pic} alt="" />
+              <img src={bid?.pic2} alt="" />
               <img src={bid?.pic} alt="" />
               <img src={bid?.pic} alt="" />
               <img src={bid?.pic} alt="" />
