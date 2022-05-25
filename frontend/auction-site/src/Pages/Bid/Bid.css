@@ -1,9 +1,56 @@
 .bid-container {
-  border: 3px solid green;
 }
 
 .bid {
-  height: 40vh;
-  border: 2px solid crimson;
-  color: red;
+  color: rgb(68, 65, 65);
+}
+.bid h2,
+.bid h3,
+.bid p {
+  padding: 0;
+  margin: 0;
+}
+.bid-item-header {
+  padding: 0 20px;
+  text-align: center;
+}
+.bid-item-header h2 {
+  padding-bottom: 5px;
+}
+.bid-watch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 0px;
+}
+
+.bid-watch > div {
+  width: 100%;
+}
+.bid-item-timer h3,
+.bid-item-timer p {
+  padding: 5px;
+}
+.bid-images {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 5px;
+}
+.bid-images img {
+  width: 100%;
+}
+.bid-images-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0px;
+  padding: 0px;
+}
+.bid-images-grid img {
+  height: 50px;
+  padding: 2px;
+  border-radius: 5px;
+}
+.image-select {
+  border: 2px solid navy;
 }
