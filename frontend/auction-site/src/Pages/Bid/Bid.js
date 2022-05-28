@@ -19,13 +19,27 @@ export const Bid = () => {
       <div className="bid-container">
         <div className="bid">
           <div className="bid-upper-segment">
-            <div className="bid-item-header">
-              <h2>{bid?.title}</h2>
-              <h3>Bid:{bid?.price}</h3>
-              <div className="bid-details">
-                <p>5-0 Liter V9, 4WD, 8.9/10 AutoFax </p>
+            <div className="bid-top-card">
+              <div className="bid-seller">
+                <img
+                  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"
+                  alt=""
+                />
+                <h2>John 845-ab</h2>
+              </div>
+              <div className="bid-item-header">
+                <h2>{bid?.title}</h2>
+                <h3>Bid:{bid?.price}</h3>
+                <div className="bid-details">
+                  <p>
+                    {bid?.location ? bid.location : "Orville"}, SK, 8.9/10
+                    AutoFax{" "}
+                  </p>
+                  <i className="fa fa-star "></i>
+                </div>
               </div>
             </div>
+
             <div className="bid-watch">
               <div className="item-timer bid-item-timer">
                 {/* <p>
@@ -49,20 +63,69 @@ export const Bid = () => {
           </div>
 
           <div className="bid-images">
-            <img src={bid?.pic} alt="" style={{ width: "100%" }} />
-            <div className="bid-images-grid">
-              <img src={bid?.pic} alt="" className="image-select" />
-              <img src={bid?.pic2} alt="" />
-              <img src={bid?.pic} alt="" />
-              <img src={bid?.pic} alt="" />
-              <img src={bid?.pic} alt="" />
-              <img src={bid?.pic} alt="" />
+            <div className="selected-image">
+              <img src={bid?.pic} alt="" style={{ width: "100%" }} />
             </div>
+            <div className="image-grid">
+              <div className="bid-image-unit image-select">
+                <img src={bid?.pic} alt="" />
+              </div>
+              <div className="bid-image-unit">
+                <img src={bid?.pic2} alt="" />
+              </div>
+              <div className="bid-image-unit">
+                <img src={bid?.pic} alt="" />
+              </div>
+              <div className="bid-image-unit">
+                <img src={bid?.pic3} alt="" />
+              </div>
+              <div className="bid-image-unit">
+                <img src={bid?.pic4} alt="" />
+              </div>
+              <div className="bid-image-unit">
+                <img src={bid?.pic3} alt="" />
+              </div>
+            </div>
+
             <div className="bid-information">
-              <div className="bid-info-header">Header</div>
+              <div className="bid-information-board ">
+                <div className="bid-information-unit">
+                  <h3>Brand</h3>
+                  <p>{bid?.brand}</p>
+                </div>
+
+                <div className="bid-information-unit">
+                  <h3>Model</h3>
+                  <p>{bid?.title}</p>
+                </div>
+                <div className="bid-information-unit">
+                  <h3>Location</h3>
+                  <p>{bid?.location ? bid.location : "New York"}</p>
+                </div>
+                <div className="bid-information-unit">
+                  <h3>Fuel</h3>
+                  <p>{bid?.fuel ? bid.fuel : "Gasoline"}</p>
+                </div>
+              </div>
+              <div className="bid-information-board board-md">
+                <div className="bid-information-unit">
+                  <h3>Milage</h3>
+                  <p>{bid?.km},000</p>
+                </div>
+                <div className="bid-information-unit">
+                  <h3>Color</h3>
+                  <p>{bid?.color ? bid?.color : "Red"}</p>
+                </div>
+                <div className="bid-information-unit">
+                  <h3>Type</h3>
+                  <p>{bid?.type ? bid?.type : "Sedan"}</p>
+                </div>
+                <div className="bid-information-unit">
+                  <h3>Seller</h3>
+                  <p>{bid?.seller ? bid?.type : "Private"}</p>
+                </div>
+              </div>
             </div>
-            <h3>VIN:10093998*****</h3>
-            <h3>Odometer:{bid.km}</h3>
           </div>
         </div>
       </div>
