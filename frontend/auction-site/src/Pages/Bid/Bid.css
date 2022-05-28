@@ -15,7 +15,7 @@
   /* border: 1px solid grey; */
   display: grid;
   grid-template-columns: 1fr;
-  border: 1px solid rgba(128, 128, 128, 0.412);
+
   padding: 10px;
   border-radius: 4px;
   padding: 5px;
@@ -50,7 +50,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 7px 0px;
+  padding: 10px 0px;
+  border: 1px solid grey;
 }
 
 .bid-watch > div {
@@ -84,14 +85,14 @@
 .image-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 100%;
+  /* grid-template-rows: 1fr 1fr 1fr; */
 }
 .bid-image-unit {
   height: 100%;
   width: 100%;
-  min-width: 145px;
-  min-height: 145px;
-  padding: 5px;
+  min-width: 115px;
+
+  padding: 3px;
   overflow: hidden;
   background-color: white;
 }
