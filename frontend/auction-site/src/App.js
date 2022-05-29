@@ -8,6 +8,7 @@ import { SiteContextProvider } from "./Context/Context";
 import { MenuModals } from "./Components/modals/Menu/MenuModals";
 import { AppHeader } from "./Components/AppHeader/AppHeader";
 import { Bid } from "./Pages/Bid/Bid";
+import anim1 from "./anim1.svg";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
