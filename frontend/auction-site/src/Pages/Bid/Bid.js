@@ -40,25 +40,48 @@ export const Bid = () => {
               </div>
             </div>
 
-            <div className="bid-watch">
-              <div className="item-timer bid-item-timer">
-                {/* <p>
+            <div>
+              <div className="bid-watch">
+                <div className="item-timer bid-item-timer">
+                  {/* <p>
                   {item.days} days {item.hours} hours left on bid
                 </p> */}
-                <div className="time-unit">
-                  <h3 style={{ margin: "0" }}>0{bid.days}</h3>
-                  <p style={{ margin: "0" }}>Days</p>
+                  <div className="time-unit">
+                    <h3 style={{ margin: "0" }}>0{bid.days}</h3>
+                    <p style={{ margin: "0" }}>Days</p>
+                  </div>
+                  <div className="time-unit">
+                    <h3 style={{ margin: "0" }}>{bid.hours}</h3>
+                    <p style={{ margin: "0" }}>Hours</p>
+                  </div>
+                  <div className="time-unit">
+                    <h3 style={{ margin: "0" }}>{bid.hours + 27}</h3>
+                    <p style={{ margin: "0" }}>Minutes</p>
+                  </div>
                 </div>
-                <div className="time-unit">
-                  <h3 style={{ margin: "0" }}>{bid.hours}</h3>
-                  <p style={{ margin: "0" }}>Hours</p>
+                <button className="btn btn-alternate ">bid </button>
+              </div>
+              <div className="bid-stats">
+                <div className="bid-stats-image">
+                  <h3> Get</h3>
+
+                  <img
+                    src="https://autocanadaprod-com.cdn-convertus.com/uploads/sites/37/2019/03/5b05e21fa98008db223ad40e92be8dbcx.png"
+                    alt=""
+                    style={{ width: "150px" }}
+                  />
                 </div>
-                <div className="time-unit">
-                  <h3 style={{ margin: "0" }}>{bid.hours + 27}</h3>
-                  <p style={{ margin: "0" }}>Minutes</p>
+                <div className="bid-stats-action">
+                  {" "}
+                  <div>
+                    <i className="fa fa-hashtag"></i>
+                    <h3>19 Views</h3>
+                  </div>
+                  <div id="msg">
+                    <button className=" btn btn-alternate">Bid</button>
+                  </div>
                 </div>
               </div>
-              <button className="btn btn-alternate ">bid </button>
             </div>
           </div>
 
@@ -86,45 +109,69 @@ export const Bid = () => {
                 <img src={bid?.pic3} alt="" />
               </div>
             </div>
+          </div>
+          <div className="bid-information">
+            <div className="bid-information-board ">
+              <div className="bid-information-unit">
+                <h3>Brand</h3>
+                <p>{bid?.brand}</p>
+              </div>
 
-            <div className="bid-information">
-              <div className="bid-information-board ">
-                <div className="bid-information-unit">
-                  <h3>Brand</h3>
-                  <p>{bid?.brand}</p>
+              <div className="bid-information-unit">
+                <h3>Model</h3>
+                <p>{bid?.title}</p>
+              </div>
+              <div className="bid-information-unit">
+                <h3>Location</h3>
+                <p>{bid?.location ? bid.location : "New York"}</p>
+              </div>
+              <div className="bid-information-unit">
+                <h3>Fuel</h3>
+                <p>{bid?.fuel ? bid.fuel : "Gasoline"}</p>
+              </div>
+            </div>
+            <div className="bid-information-board board-md">
+              <div className="bid-information-unit">
+                <h3>Milage</h3>
+                <p>{bid?.km},000</p>
+              </div>
+              <div className="bid-information-unit">
+                <h3>Color</h3>
+                <p>{bid?.color ? bid?.color : "Red"}</p>
+              </div>
+              <div className="bid-information-unit">
+                <h3>Type</h3>
+                <p>{bid?.type ? bid?.type : "Sedan"}</p>
+              </div>
+              <div className="bid-information-unit">
+                <h3>Seller</h3>
+                <p>{bid?.seller ? bid?.type : "Private"}</p>
+              </div>
+            </div>
+            <div className="bid-watch large">
+              <div className="item-timer bid-item-timer">
+                {/* <p>
+                  {item.days} days {item.hours} hours left on bid
+                </p> */}
+                <div className="time-unit">
+                  <h3 style={{ margin: "0" }}>0{bid.days}</h3>
+                  <p style={{ margin: "0" }}>Days</p>
                 </div>
-
-                <div className="bid-information-unit">
-                  <h3>Model</h3>
-                  <p>{bid?.title}</p>
+                <div className="time-unit">
+                  <h3 style={{ margin: "0" }}>{bid.hours}</h3>
+                  <p style={{ margin: "0" }}>Hours</p>
                 </div>
-                <div className="bid-information-unit">
-                  <h3>Location</h3>
-                  <p>{bid?.location ? bid.location : "New York"}</p>
-                </div>
-                <div className="bid-information-unit">
-                  <h3>Fuel</h3>
-                  <p>{bid?.fuel ? bid.fuel : "Gasoline"}</p>
+                <div className="time-unit">
+                  <h3 style={{ margin: "0" }}>{bid.hours + 27}</h3>
+                  <p style={{ margin: "0" }}>Minutes</p>
                 </div>
               </div>
-              <div className="bid-information-board board-md">
-                <div className="bid-information-unit">
-                  <h3>Milage</h3>
-                  <p>{bid?.km},000</p>
-                </div>
-                <div className="bid-information-unit">
-                  <h3>Color</h3>
-                  <p>{bid?.color ? bid?.color : "Red"}</p>
-                </div>
-                <div className="bid-information-unit">
-                  <h3>Type</h3>
-                  <p>{bid?.type ? bid?.type : "Sedan"}</p>
-                </div>
-                <div className="bid-information-unit">
-                  <h3>Seller</h3>
-                  <p>{bid?.seller ? bid?.type : "Private"}</p>
-                </div>
-              </div>
+              <button
+                className="btn btn-alternate "
+                style={{ color: "white", backgroundColor: "green" }}
+              >
+                Message Seller{" "}
+              </button>
             </div>
           </div>
         </div>
