@@ -74,7 +74,7 @@ export const Bid = () => {
                 <div className="bid-stats-action">
                   {" "}
                   <div>
-                    <i className="fa fa-hashtag"></i>
+                    <i className="fas fa-eye"></i>
                     <h3>19 Views</h3>
                   </div>
                   <div id="msg">
@@ -97,16 +97,16 @@ export const Bid = () => {
                 <img src={bid?.pic2} alt="" />
               </div>
               <div className="bid-image-unit">
-                <img src={bid?.pic} alt="" />
-              </div>
-              <div className="bid-image-unit">
                 <img src={bid?.pic3} alt="" />
               </div>
               <div className="bid-image-unit">
                 <img src={bid?.pic4} alt="" />
               </div>
               <div className="bid-image-unit">
-                <img src={bid?.pic3} alt="" />
+                <img src={bid?.pic5} alt="" />
+              </div>
+              <div className="bid-image-unit">
+                <img src={bid?.pic6} alt="" />
               </div>
             </div>
           </div>

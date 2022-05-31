@@ -75,6 +75,7 @@
   padding: 10px 0;
 }
 .selected-image {
+  object-fit: cover;
 }
 
 .selected-image img {
