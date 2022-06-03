@@ -89,6 +89,53 @@ code {
   height: 2rem;
   color: rgba(0, 0, 0, 0.623);
 }
+
+/*bid-timer*/
+.time-unit {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.time-unit h3 {
+  width: 2rem;
+  text-align: center;
+  background: var(--color-primary);
+  background: rgba(0, 0, 0, 0.811);
+  background-color: transparent;
+  color: white;
+  color: var(--color-primary);
+  border-radius: 2px;
+  padding: 4px;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  letter-spacing: 1.25px;
+  border: 1px solid rgba(128, 128, 128, 0.475);
+}
+.time-unit p {
+  font-weight: 700;
+  text-align: center;
+  font-size: 12px;
+}
+.item-info p {
+  color: rgb(49, 104, 150);
+  font-weight: 700;
+  font-size: 16px;
+}
+.item-timer {
+  /* height: 2rem; */
+  /* border: 3px solid crimson; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 7px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.header {
+}
+
 @media only screen and (min-width: 768px) {
   .btn-primary {
     height: 3rem;

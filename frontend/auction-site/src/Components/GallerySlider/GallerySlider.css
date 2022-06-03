@@ -1,0 +1,46 @@
+.bid-page-slider {
+  display: flex;
+  flex-direction: column;
+}
+.main-image {
+}
+.main-image img {
+  width: 100%;
+
+  object-fit: cover;
+}
+.image-select {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0;
+  width: 100%;
+}
+.image-unit {
+  height: 100%;
+  min-width: 100px;
+  padding: 2px;
+  margin: 0;
+  height: 90px;
+}
+.image-unit img {
+  margin: 0s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.362);
+  border-radius: 5px;
+}
+.upper {
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .image-select {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .image-unit {
+    height: 120px;
+  }
+  .upper {
+    display: block;
+  }
+}
