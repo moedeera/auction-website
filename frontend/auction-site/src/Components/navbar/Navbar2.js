@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./Navbar2.css";
+import { Link } from "react-router-dom";
 
 import { SiteContext } from "../../Context/Context";
 
@@ -54,19 +55,26 @@ function Navbar2({ placeholder, data }) {
             <div className="dataResult">
               {filteredData.slice(0, 15).map((value, key) => {
                 return (
-                  <p
-                    style={
-                      value.name.length > 3
-                        ? { textTransform: "capitalize" }
-                        : { textTransform: "uppercase" }
-                    }
-                    key={key}
+                  <Link
+                    to={`/search/${value.name}`}
                     onClick={() => {
-                      setWordEntered(value.name);
+                      clearInput();
                     }}
                   >
-                    {value.name}{" "}
-                  </p>
+                    <p
+                      style={
+                        value.name.length > 3
+                          ? { textTransform: "capitalize", color: "steelblue" }
+                          : { textTransform: "uppercase", color: "steelblue" }
+                      }
+                      key={key}
+                      onClick={() => {
+                        setWordEntered(value.name);
+                      }}
+                    >
+                      {value.name}{" "}
+                    </p>
+                  </Link>
                 );
               })}
             </div>
@@ -83,7 +91,14 @@ function Navbar2({ placeholder, data }) {
           </select>
         </div>
         <div className="nv2-lg">
-          <button className="btn-alternate">Search</button>
+          <Link
+            to={`/search/${wordEntered}`}
+            onClick={() => {
+              clearInput();
+            }}
+          >
+            <button className="btn-alternate">Search</button>
+          </Link>
         </div>
       </div>
     </div>
