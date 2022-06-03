@@ -92,7 +92,7 @@ function Navbar2({ placeholder, data }) {
         </div>
         <div className="nv2-lg">
           <Link
-            to={`/search/${wordEntered}`}
+            to={wordEntered !== "" ? `/search/${wordEntered}` : `/search/All`}
             onClick={() => {
               clearInput();
             }}
