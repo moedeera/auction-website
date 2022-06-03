@@ -33,12 +33,15 @@ export const BidInfo = ({ bid }) => {
         </div>
       </div>
       <div className="info-section-lower">
-        <h3>About Vehicle</h3>
-        <p>
-          Moderately used but is well kept, with a full car fax report and extra
-          images to show all angles of the vehicle. feel free to come by for a
-          test drive
-        </p>
+        <div>
+          <h3>About Vehicle</h3>
+          <p>
+            Moderately used but is well kept, with a full car fax report and
+            extra images to show all angles of the vehicle. feel free to come by
+            for a test drive
+          </p>
+        </div>
+
         <div>
           <h3>Viewer rating</h3>
           <div className="stars">
@@ -46,6 +49,16 @@ export const BidInfo = ({ bid }) => {
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
+            <i class="fa fa-star" style={{ color: "grey" }}></i>
+          </div>
+        </div>
+        <div>
+          <h3>Critics rating</h3>
+          <div className="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star" style={{ color: "grey" }}></i>
             <i class="fa fa-star" style={{ color: "grey" }}></i>
           </div>
         </div>

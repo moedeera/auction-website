@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GallerySlider } from "../../Components/GallerySlider/GallerySlider";
 import { BidInfo } from "../../Components/BidInfo/BidInfo";
+import { BidPageDetails } from "../../Components/BidComponents/BidPageDetails";
 import "./Bid.css";
 import axios from "axios";
 import { SiteContext } from "../../Context/Context";
@@ -24,8 +25,7 @@ export const Bid = () => {
           <BidInfo bid={bid} />
         </div>
 
-        <div className="bid-page-cta">Hello2</div>
-        <div className="bid-page-info">Hello3</div>
+        <BidPageDetails bid={bid} />
       </div>
     </div>
   );
