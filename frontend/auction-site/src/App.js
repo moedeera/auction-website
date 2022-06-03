@@ -2,6 +2,7 @@ import "./App.css";
 import { dataBase } from "./Data";
 import { Homepage } from "./Pages/Homepage/Homepage";
 import { Navbar } from "./Components/navbar/Navbar";
+import { SearchPage } from "./Pages/SearchPage/SearchPage";
 import Navbar2 from "./Components/navbar/Navbar2";
 import { Footer } from "./Components/footer/Footer";
 import { SiteContextProvider } from "./Context/Context";
@@ -17,20 +18,21 @@ function App() {
   return (
     <SiteContextProvider>
       <div className="">
-        <div>
-          <MenuModals />
-          <Navbar />
-          <AppHeader />
-          <Navbar2 placeholder="Search for a car..." data={data} />
-        </div>
-
+        {" "}
         <Router>
+          <div>
+            <MenuModals />
+            <Navbar />
+            <AppHeader />
+            <Navbar2 placeholder="Search for a car..." data={data} />
+          </div>
+
           <Routes>
             <Route path="/" element={<Homepage />} />
+            <Route path="/search/:type" element={<SearchPage />} />
             <Route path="/bid/:id" element={<Bid />} />
           </Routes>
         </Router>
-
         <Footer />
       </div>
     </SiteContextProvider>

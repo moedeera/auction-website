@@ -4,6 +4,7 @@ import settings from "./settings.png";
 import bell from "./bell.png";
 import cart from "./cart.png";
 import brand from "./brand.png";
+import { Link } from "react-router-dom";
 
 // import { MenuModals } from "../modals/Menu/MenuModals";
 // import { SiteContext } from "../../../Context/Context";
@@ -19,16 +20,22 @@ export const Navbar = () => {
     <div className="nav-container">
       <div className="navbar">
         <div className="navbar_Header">
-          <div className="navbar_title">
-            <i
-              className="fab fa-bandcamp icon-lg"
-              style={{ color: "goldenrod" }}
-            ></i>
+          <Link to={"/"}>
+            {" "}
+            <div className="navbar_title">
+              <i
+                className="fab fa-bandcamp icon-lg"
+                style={{ color: "goldenrod" }}
+              ></i>
 
-            <h3>
-              <span style={{ color: "gold" }}>Auc</span>tionaX
-            </h3>
-          </div>
+              <h3>
+                <span style={{ color: "gold" }}>Auc</span>
+
+                <span style={{ color: "steelblue" }}>tionaX</span>
+              </h3>
+            </div>
+          </Link>
+
           {/* <NavSearch size={"large"} /> */}
           <div className="navbar-si-post">
             <h5>Sign in</h5>

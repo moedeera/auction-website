@@ -26,6 +26,7 @@
   max-width: 10rem;
   margin: 0 auto;
   border-radius: 2px;
+  transition: 600ms ease-in-out;
 }
 .info-section-lower {
   display: none;
@@ -52,5 +53,11 @@
   }
   .stars {
     color: goldenrod;
+  }
+  .info-section-CTA button:hover {
+    background-color: var(--color-brand);
+    box-shadow: 0px 15px 20px rgba(46, 104, 229, 0.4);
+    color: var(--color-secondary);
+    transform: translateY(-3px);
   }
 }
