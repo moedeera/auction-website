@@ -8,27 +8,6 @@
   max-width: 1300px;
   margin: 0 auto;
 }
-.bid-page-details {
-  display: flex;
-  flex-direction: column;
-}
-.bid-details {
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: aliceblue;
-  margin: 10px auto;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
-  justify-self: center;
-  width: 100%;
-}
-.bid-details-unit {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 7.5px;
-}
 
 @media only screen and (min-width: 600px) {
   .image-select {
@@ -37,26 +16,5 @@
   .upper-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
-  }
-  .bid-page-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
-  }
-  .seller-info {
-    width: 50%;
-    display: flex;
-    gap: 10px;
-  }
-  .seller-info img {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-  }
-  .bid-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: center;
   }
 }

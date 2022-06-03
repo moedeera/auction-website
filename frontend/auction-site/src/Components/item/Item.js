@@ -16,7 +16,7 @@ export const Item = ({ selection, size }) => {
   }
 
   return (
-    <div className="container">
+    <div className="container" style={{ border: "none" }}>
       {!size && (
         <>
           <div className="items-current">
@@ -28,7 +28,7 @@ export const Item = ({ selection, size }) => {
             {" "}
             {cars.map(
               (item, index) =>
-                index < 8 && (
+                index < 6 && (
                   <Link to={`/bid/${item.id}`} key={item.id}>
                     <div className="posted-item current">
                       <div className="item-images">
