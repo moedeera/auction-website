@@ -20,6 +20,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: true,
+    currentHighestBidder: 1234,
   },
   {
     id: 1,
@@ -42,6 +43,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: true,
+    currentHighestBidder: 1005,
   },
   {
     id: 2,
@@ -64,6 +66,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: true,
+    currentHighestBidder: 1234,
   },
   {
     id: 3,
@@ -86,6 +89,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: true,
+    currentHighestBidder: 1234,
   },
   {
     id: 4,
@@ -108,6 +112,7 @@ const data = [
     classic: true,
     sold: false,
     promoted: true,
+    currentHighestBidder: 1224,
   },
   {
     id: 5,
@@ -130,6 +135,7 @@ const data = [
     classic: true,
     sold: false,
     promoted: true,
+    currentHighestBidder: 1874,
   },
   {
     id: 6,
@@ -152,6 +158,7 @@ const data = [
     classic: false,
     sold: true,
     promoted: false,
+    currentHighestBidder: 1934,
   },
   {
     id: 7,
@@ -174,6 +181,7 @@ const data = [
     classic: false,
     sold: true,
     promoted: false,
+    currentHighestBidder: 1134,
   },
   {
     id: 8,
@@ -196,6 +204,7 @@ const data = [
     classic: false,
     sold: true,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 9,
@@ -218,6 +227,7 @@ const data = [
     classic: false,
     sold: true,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 10,
@@ -240,6 +250,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 11,
@@ -262,6 +273,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 12,
@@ -284,6 +296,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: false,
+    currentHighestBidder: 3334,
   },
   {
     id: 13,
@@ -306,6 +319,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: false,
+    currentHighestBidder: 9002,
   },
   {
     id: 14,
@@ -328,6 +342,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 15,
@@ -350,6 +365,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 16,
@@ -372,6 +388,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 17,
@@ -394,6 +411,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 18,
@@ -416,6 +434,7 @@ const data = [
     classic: false,
     sold: true,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 19,
@@ -438,6 +457,7 @@ const data = [
     classic: false,
     sold: true,
     promoted: false,
+    currentHighestBidder: 1234,
   },
   {
     id: 20,
@@ -460,6 +480,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: true,
+    currentHighestBidder: 1234,
   },
   {
     id: 21,
@@ -482,6 +503,7 @@ const data = [
     classic: false,
     sold: true,
     promoted: true,
+    currentHighestBidder: 1234,
   },
 ];
 

@@ -1,8 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { getGuest, updateGuest } = require("../controllers/userControl");
+const {
+  getGuest,
+  updateGuest,
+  createGuest,
+} = require("../controllers/userControl");
 
-router.route("/").get(getGuest);
-router.route("/").post(updateGuest);
+router.route("/").get(getGuest).post(updateGuest);
+
+// router.route("/").post(updateGuest);
 
 module.exports = router;

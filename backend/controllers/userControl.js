@@ -19,6 +19,15 @@ let guest = {
 // desc
 // route /api/guest
 // access PUBLIC
+const createGuest = asyncHandler(async (req, res) => {
+  const newGuest = req.body.user;
+
+  res.status(200).send(newGuest);
+});
+
+// desc
+// route /api/guest
+// access PUBLIC
 const getGuest = asyncHandler(async (req, res) => {
   res.status(200).send(guest);
 });
@@ -29,6 +38,10 @@ const getGuest = asyncHandler(async (req, res) => {
 const updateGuest = asyncHandler(async (req, res) => {
   const updatedUser = req.body.user;
   guest = updatedUser;
+  if (!guest) {
+    res.send("please enter data");
+  }
+
   res.status(200).send(guest);
 });
 
@@ -42,4 +55,5 @@ const generateToken = (id) => {
 module.exports = {
   getGuest,
   updateGuest,
+  createGuest,
 };
