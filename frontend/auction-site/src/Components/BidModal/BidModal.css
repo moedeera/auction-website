@@ -1,0 +1,79 @@
+.bid-modal {
+  height: 400px;
+  width: 100%;
+  max-width: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(240, 248, 255, 0.942);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.685);
+  transform: 1100ms ease-in-out;
+}
+.upper-modal {
+  height: 400px;
+}
+.lower-modal {
+  display: flex;
+  justify-content: center;
+}
+.lower-modal button {
+  max-width: 12rem;
+}
+.modal-first-question {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.login-choice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.loading div {
+  width: 1rem;
+  height: 1rem;
+  margin: 2rem 0.3rem;
+  background: var(--color-primary);
+  border-radius: 50%;
+  -webkit-animation: 0.9s bounce infinite alternate;
+  animation: 0.9s bounce infinite alternate;
+}
+.loading div:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.loading div:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  to {
+    opacity: 0.3;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
+@media only screen and (min-width: 600px) {
+  .lower-modal {
+    justify-content: flex-end;
+  }
+}

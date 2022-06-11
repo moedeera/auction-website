@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BidInfo.css";
 
-export const BidInfo = ({ bid }) => {
+export const BidInfo = ({ bid, showModal }) => {
   return (
     <div className="info-section">
       <div className="info-section-upper">
@@ -28,7 +28,15 @@ export const BidInfo = ({ bid }) => {
           </div>
         </div>
         <div className="info-section-CTA">
-          <button className="btn btn-primary">Bid Now</button>
+          <button
+            className="btn btn-primary btn-bid"
+            onClick={() => {
+              console.log("hey");
+              showModal(true);
+            }}
+          >
+            Bid Now
+          </button>
           {/* <button className="btn btn-primary" id="contact-seller">Contact</button> */}
         </div>
       </div>
@@ -45,21 +53,20 @@ export const BidInfo = ({ bid }) => {
         <div>
           <h3>Viewer rating</h3>
           <div className="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star" style={{ color: "grey" }}></i>
+            <i className="fa fa-star"></i>
+            <i className="fa fa-star"></i>
+            <i className="fa fa-star"></i>
+            <i className="fa fa-star" style={{ color: "grey" }}></i>
           </div>
         </div>
         <div>
           <h3>Critics rating</h3>
           <div className="stars">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star" style={{ color: "grey" }}></i>
-            <i class="fa fa-star" style={{ color: "grey" }}></i>
+            <i className="fa fa-star"></i>
+            <i className="fa fa-star"></i>
+            <i className="fa fa-star"></i>
+            <i className="fa fa-star" style={{ color: "grey" }}></i>
+            <i className="fa fa-star" style={{ color: "grey" }}></i>
           </div>
         </div>
       </div>

@@ -73,6 +73,8 @@ export const SiteContextProvider = ({ children }) => {
   ]);
   const [brands, setBrands] = useState([]);
   const [bid, setBid] = useState({});
+  const [user, setUser] = useState(null);
+  const [token, setToken] = useState(null);
   useEffect(() => {
     const getPromotedCars = async () => {
       const cars = await fetchCars();
@@ -93,6 +95,25 @@ export const SiteContextProvider = ({ children }) => {
     setBid(currentBid);
   };
 
+  const registerGuest = async () => {
+    let Guest;
+    try {
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      const res = await axios.get("/users");
+      setUser(res.data.guest);
+      return res.data;
+      //   setAuth(res.data);
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  };
+
   return (
     <SiteContext.Provider
       value={{
@@ -107,6 +128,8 @@ export const SiteContextProvider = ({ children }) => {
         brands,
         getBid,
         bid,
+        registerGuest,
+        user,
       }}
     >
       {children}

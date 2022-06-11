@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const {
-  getGuest,
-  updateGuest,
+  updateProfile,
   createGuest,
-  getUser,
+  getProfile,
 } = require("../controllers/userControl");
 
-router.route("/").get(createGuest).post(getUser);
+router.route("/").get(createGuest).post(getProfile);
+router.route("/:id").put(updateProfile);
 router.route("/login").post(createGuest);
 
 // router.route("/").post(updateGuest);

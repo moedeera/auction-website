@@ -58,18 +58,9 @@ const createGuest = asyncHandler(async (req, res) => {
 });
 
 // desc
-// route /api/guest
-// access PUBLIC
-const getGuest = asyncHandler(async (req, res) => {
-  console.log("get guest request made");
-
-  res.status(200).send(guest);
-});
-
-// desc
 // route /api/user
 // access PRIVATE
-const getUser = asyncHandler(async (req, res) => {
+const getProfile = asyncHandler(async (req, res) => {
   const token = req.body.token;
   console.log("get user info request made", req.body.id);
   if (!token) {
@@ -108,21 +99,31 @@ const getUser = asyncHandler(async (req, res) => {
 // desc
 // route /api/login
 // access PUBLIC
-const LoginUser = asyncHandler(async (req, res) => {
-  console.log("login user request made");
-
-  res.status(200).send(guest);
-});
-
 // desc
 // route /api/guest
 // access PUBLIC
-const updateGuest = asyncHandler(async (req, res) => {
-  const updatedUser = req.body.user;
-  guest = updatedUser;
-  if (!guest) {
-    res.send("please enter data");
+const updateProfile = asyncHandler(async (req, res) => {
+  const token = req.body.token;
+  const id = req.params.id;
+
+  // if (!token || !id) {
+  //   res.send("access denied");
+  // }
+
+  const profile = await Profile.findById(req.params.id);
+  if (!profile) {
+    return res.status(401).send("Profile not found");
   }
+
+  const updatedProfile = await Profile.findByIdAndUpdate(id, req.body.profile, {
+    new: true,
+  });
+
+  res.status(200).send(updateProfile);
+});
+
+const LoginUser = asyncHandler(async (req, res) => {
+  console.log("login user request made");
 
   res.status(200).send(guest);
 });
@@ -135,8 +136,7 @@ const generateToken = (id) => {
 };
 
 module.exports = {
-  getGuest,
-  updateGuest,
   createGuest,
-  getUser,
+  getProfile,
+  updateProfile,
 };

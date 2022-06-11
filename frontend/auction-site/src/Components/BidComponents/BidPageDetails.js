@@ -51,7 +51,7 @@ export const BidPageDetails = ({ bid }) => {
           className="btn btn-primary"
           style={{ backgroundColor: "green" }}
         >
-          <i class="fa fa-envelope-square" aria-hidden="true"></i>
+          <i className="fa fa-envelope-square" aria-hidden="true"></i>
           Contact Seller
         </button>
       </div>
