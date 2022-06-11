@@ -26,9 +26,8 @@ export const BidModal = ({ showModal }) => {
                   setPhase("loading");
                   registerGuest();
                   console.log(user);
-                  if (user !== null) {
-                    setTimeout(setPhase(0), 3000);
-                  }
+
+                  setTimeout(setPhase(0), 3000);
                 }}
               >
                 Guest

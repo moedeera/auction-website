@@ -27,6 +27,7 @@ code {
   border: none;
   cursor: pointer;
   font-family: "Fira Sans Condensed", sans-serif;
+  transition: 400ms ease-in-out;
 }
 
 .btn-secondary {

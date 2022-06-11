@@ -39,7 +39,12 @@ export const Navbar = () => {
           {/* <NavSearch size={"large"} /> */}
           <div className="navbar-si-post">
             <h5>Sign in</h5>
-            <button className="btn-primary">Post</button>
+            <button
+              className="btn btn-primary btn-bid"
+              style={{ maxWidth: "10rem" }}
+            >
+              Post
+            </button>
           </div>
         </div>
         {/* <NavSearch size={"medium"} /> */}
