@@ -4,9 +4,11 @@ const {
   getGuest,
   updateGuest,
   createGuest,
+  getUser,
 } = require("../controllers/userControl");
 
-router.route("/").get(getGuest).post(updateGuest);
+router.route("/").get(createGuest).post(getUser);
+router.route("/login").post(createGuest);
 
 // router.route("/").post(updateGuest);
 

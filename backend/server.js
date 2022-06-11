@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+const connectDB = require("./config/db");
 const cors = require("cors");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT || 1660;
@@ -12,7 +13,7 @@ app.use(
     origin: "*",
   })
 );
-
+connectDB();
 app.use("/main", require("./routes/main"));
 app.use("/bids", require("./routes/bids"));
 app.use("/users", require("./routes/users"));
