@@ -103,14 +103,6 @@ const getProfile = asyncHandler(async (req, res) => {
 // route /api/guest
 // access PUBLIC
 const updateProfile = asyncHandler(async (req, res) => {
-  const token = req.body.token;
-  const id = req.params.id;
-
-  // if (!token || !id) {
-  //   res.send("access denied");
-  // }
-  console.log("put request made", req.params.id);
-  const all = await Profile.find();
   const profile = await Profile.findById(req.params.id);
   if (!profile) {
     console.log("not found");

@@ -88,18 +88,26 @@ const createAuction = asyncHandler(async (req, res) => {
 // access PUBLIC
 
 const updateAuction = asyncHandler(async (req, res) => {
-  const identifier = req.params.id;
-  const auction = bidData.find((bid) => bid.id == identifier);
-
-  if (req.params.id === 1) {
-    res.status(401).send("error");
+  const auction = await Auction.findById(req.params.id);
+  if (!auction) {
+    console.log("not found");
+    return res.status(401).send("not found");
   }
 
-  res.status(200).send(bidm);
+  const updatedAuction = await Auction.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true,
+    }
+  );
+
+  res.status(200).send(updatedAuction);
 });
 
 module.exports = {
   getAllAuctions,
   getAuction,
   createAuction,
+  updateAuction,
 };
