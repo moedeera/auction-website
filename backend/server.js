@@ -15,7 +15,7 @@ app.use(
 );
 connectDB();
 app.use("/main", require("./routes/main"));
-app.use("/bids", require("./routes/bids"));
+app.use("/bids", require("./routes/auction"));
 app.use("/users", require("./routes/users"));
 
 if (process.env.NODE_ENV === "production") {

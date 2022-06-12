@@ -109,17 +109,23 @@ const updateProfile = asyncHandler(async (req, res) => {
   // if (!token || !id) {
   //   res.send("access denied");
   // }
-
+  console.log("put request made", req.params.id);
+  const all = await Profile.find();
   const profile = await Profile.findById(req.params.id);
   if (!profile) {
-    return res.status(401).send("Profile not found");
+    console.log("not found");
+    return res.status(401).send("not found");
   }
 
-  const updatedProfile = await Profile.findByIdAndUpdate(id, req.body.profile, {
-    new: true,
-  });
+  const updatedProfile = await Profile.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    {
+      new: true,
+    }
+  );
 
-  res.status(200).send(updateProfile);
+  res.status(200).send(updatedProfile);
 });
 
 const LoginUser = asyncHandler(async (req, res) => {
