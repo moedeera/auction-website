@@ -71,18 +71,17 @@ const createGuest = asyncHandler(async (req, res) => {
 const getProfile = asyncHandler(async (req, res) => {
   if (!req.body.token) {
     res.status(200).json({
-      info: req.body.user,
+      info: req.user,
       token: generateToken(req.body.user._id),
     });
   } else {
-    res.status(200).json(req.body.user);
+    res.status(200).json(req.user);
   }
 });
 
-// desc
 // route /api/login
 // access PUBLIC
-// ALLOWS use to access account by logging in
+//LOGS IN A USER
 const loginUser = asyncHandler(async (req, res, next) => {
   console.log("login user request made");
 
@@ -102,16 +101,27 @@ const loginUser = asyncHandler(async (req, res, next) => {
 // desc
 // route /api/guest
 // access PUBLIC
+//UPDATES A PROFILE
 const updateProfile = asyncHandler(async (req, res) => {
   const profile = await Profile.findById(req.params.id);
+  console.log(req.user.email);
   if (!profile) {
     console.log("not found");
-    return res.status(401).send("not found");
+    return res.status(401).send("profile not found");
   }
-
+  if (req.user.email !== profile.email) {
+    return res.status(401).send("access restricted");
+  }
+  console.log(req.body.bids);
   const updatedProfile = await Profile.findByIdAndUpdate(
-    req.params.id,
-    req.body,
+    { _id: req.params.id },
+
+    {
+      $addToSet: {
+        bids: req.body.bids,
+      },
+    },
+
     {
       new: true,
     }

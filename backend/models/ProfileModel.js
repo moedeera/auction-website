@@ -36,18 +36,7 @@ const profileSchema = mongoose.Schema(
       type: String,
       default: 0,
     },
-    bids: [
-      {
-        auctionId: {
-          type: String,
-          required: true,
-        },
-        bid: {
-          type: Number,
-          required: true,
-        },
-      },
-    ],
+    bids: [String],
     sells: [
       {
         auctionId: {
