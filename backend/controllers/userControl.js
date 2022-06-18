@@ -71,7 +71,7 @@ const createGuest = asyncHandler(async (req, res) => {
 const getProfile = asyncHandler(async (req, res) => {
   if (!req.body.token) {
     res.status(200).json({
-      info: req.user,
+      info: req.body.user,
       token: generateToken(req.body.user._id),
     });
   } else {
