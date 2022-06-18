@@ -1,12 +1,14 @@
 const asyncHandler = require("express-async-handler");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/UserModel");
 const Profile = require("../models/ProfileModel");
 const { protect } = require("../middleWare/authMiddleware");
 
-// desc
+// GET ROUTE
 // route /api/guest
 // access PUBLIC
+// CREATES A GUEST
 const createGuest = asyncHandler(async (req, res) => {
   const alphabet = "abcdefghijklmnopqrstuvwxyz";
   const letter = alphabet[Math.floor(Math.random() * alphabet.length)];
@@ -17,7 +19,7 @@ const createGuest = asyncHandler(async (req, res) => {
     id: `${letter}-${guestId}`,
     name: "John Smith",
     username: guestName,
-    email: `user-${letter}${guestId}@gmail.com`,
+    email: `${guestName}@gmail.com`,
     location: "New York",
     card: true,
     verified: true,
@@ -29,16 +31,13 @@ const createGuest = asyncHandler(async (req, res) => {
     status: "public",
   };
 
-  let guestUser = {
-    name: guestName,
-    email: `${guestName}@gmail.com`,
-    password: "123",
-  };
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(guestName, salt);
 
   const userProfile = await Profile.create({
     user: `${letter}-${guestId}`,
     username: guestName,
-    email: `user-${letter}${guestId}@gmail.com`,
+    email: `${guestName}@gmail.com`,
     location: "New York",
     card: true,
     verified: true,
@@ -50,6 +49,13 @@ const createGuest = asyncHandler(async (req, res) => {
     status: "public",
   });
 
+  // Create Guest User
+  const user = await User.create({
+    name: guestName,
+    email: `${guestName}@gmail.com`,
+    password: hashedPassword,
+  });
+
   const guestInfo = {
     guest: guestProfile,
     token: generateToken(userProfile._id),
@@ -58,33 +64,41 @@ const createGuest = asyncHandler(async (req, res) => {
   res.status(200).send(guestInfo);
 });
 
-// desc
+// POST route
 // route /api/user
 // access PRIVATE
+// GETS PROFILE INFORMATION
 const getProfile = asyncHandler(async (req, res) => {
-  // const token = req.body.token;
-  // console.log("get user info request made", req.body.id);
-
-  // // if (token.guest===false){}
-  // const {
-  //   name,
-  //   user,
-  //   email,
-  //   username,
-  //   location,
-  //   card,
-  //   verified,
-  //   picture,
-  //   bids,
-  //   sells,
-  //   currentBid,
-  //   status,
-  // } = await Profile.findById(req.body.token);
-  res.status(200).json(req.user);
+  if (!req.body.token) {
+    res.status(200).json({
+      info: req.body.user,
+      token: generateToken(req.body.user._id),
+    });
+  } else {
+    res.status(200).json(req.body.user);
+  }
 });
+
 // desc
 // route /api/login
 // access PUBLIC
+// ALLOWS use to access account by logging in
+const loginUser = asyncHandler(async (req, res, next) => {
+  console.log("login user request made");
+
+  const { email, password } = req.body;
+
+  const userAccount = await User.findOne({ email });
+  const profile = await Profile.findOne({ email });
+
+  if (userAccount && (await bcrypt.compare(password, userAccount.password))) {
+    req.body.user = profile;
+    next();
+  } else {
+    console.log("Incorrect email or password");
+    res.send("access denied");
+  }
+});
 // desc
 // route /api/guest
 // access PUBLIC
@@ -106,12 +120,6 @@ const updateProfile = asyncHandler(async (req, res) => {
   res.status(200).send(updatedProfile);
 });
 
-const LoginUser = asyncHandler(async (req, res) => {
-  console.log("login user request made");
-
-  res.status(200).send(guest);
-});
-
 //Generate JWT
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -123,4 +131,5 @@ module.exports = {
   createGuest,
   getProfile,
   updateProfile,
+  loginUser,
 };
