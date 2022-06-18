@@ -10,8 +10,8 @@ export const GallerySlider = ({ bid }) => {
     bid?.pic3,
     bid?.pic4,
     "https://i.gaw.to/content/photos/36/52/365270_Le_GMC_Sierra_AT4_2019_le_truck_de_l_apocalypse.jpg?1024x640",
-    "https://images.caricos.com/h/honda/2020_honda_civic_sedan/images/1920x1080/2020_honda_civic_sedan_46_1920x1080.jpg",
-    "https://images.caricos.com/h/honda/2020_honda_civic_sedan/images/1920x1080/2020_honda_civic_sedan_58_1920x1080.jpg",
+    "https://i.insider.com/5ef4fe145af6cc651e2e1977?width=750&format=jpeg&auto=webp",
+    "https://images.unsplash.com/photo-1542399204-b8dd4af5113d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     "https://media.torque.com.sg/public/2019/08/how-to-keep-car-interior-looking-like-new.jpg",
     "",
   ];

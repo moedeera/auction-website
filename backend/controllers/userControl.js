@@ -2,6 +2,7 @@ const asyncHandler = require("express-async-handler");
 const jwt = require("jsonwebtoken");
 const User = require("../models/UserModel");
 const Profile = require("../models/ProfileModel");
+const { protect } = require("../middleWare/authMiddleware");
 
 // desc
 // route /api/guest
@@ -51,7 +52,7 @@ const createGuest = asyncHandler(async (req, res) => {
 
   const guestInfo = {
     guest: guestProfile,
-    token: `${letter}-${guestId}`,
+    token: generateToken(userProfile._id),
   };
   console.log("guest-create request made");
   res.status(200).send(guestInfo);
@@ -61,40 +62,25 @@ const createGuest = asyncHandler(async (req, res) => {
 // route /api/user
 // access PRIVATE
 const getProfile = asyncHandler(async (req, res) => {
-  const token = req.body.token;
-  console.log("get user info request made", req.body.id);
-  if (!token) {
-    console.log("access denied");
-    res.status(400).send("no token");
-    return;
-  }
+  // const token = req.body.token;
+  // console.log("get user info request made", req.body.id);
 
-  // if (token.guest===false){}
-  const {
-    name,
-    user,
-    email,
-    username,
-    location,
-    card,
-    verified,
-    picture,
-    bids,
-    sells,
-    currentBid,
-    status,
-  } = await Profile.findById(req.body.id);
-  res.status(200).json({
-    username,
-    location,
-    email,
-    verified,
-    picture,
-    bids,
-    sells,
-    currentBid,
-    status,
-  });
+  // // if (token.guest===false){}
+  // const {
+  //   name,
+  //   user,
+  //   email,
+  //   username,
+  //   location,
+  //   card,
+  //   verified,
+  //   picture,
+  //   bids,
+  //   sells,
+  //   currentBid,
+  //   status,
+  // } = await Profile.findById(req.body.token);
+  res.status(200).json(req.user);
 });
 // desc
 // route /api/login

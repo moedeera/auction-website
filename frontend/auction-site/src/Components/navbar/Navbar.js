@@ -22,7 +22,10 @@ export const Navbar = () => {
         <div className="navbar_Header">
           <Link to={"/"}>
             {" "}
-            <div className="navbar_title">
+            <div
+              className="navbar_title"
+              style={{ backgroundColor: "white", textDecoration: "none" }}
+            >
               <i
                 className="fab fa-bandcamp icon-lg"
                 style={{ color: "goldenrod" }}
