@@ -7,10 +7,16 @@ const {
   createAuction,
   updateAuction,
   getAuction,
+  bidOnAuction,
 } = require("../controllers/bidControl");
 const { protect } = require("../middleWare/authMiddleware");
 router.route("/").get(getAllAuctions).post(protect, createAuction);
-router.route("/:id").get(getAuction).put(updateAuction);
+router
+  .route("/:id")
+  .get(getAuction)
+  .put(updateAuction)
+  .post(protect, bidOnAuction);
+
 // router.route("/image").post(uploadImage);
 
 module.exports = router;

@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const Auction = require("../models/AuctionModel");
+const Profile = require("../models/ProfileModel");
 const Image = require("../models/ImageModel");
 const bidData = require("../routes/Data");
 var multer = require("multer");
@@ -104,12 +105,74 @@ const createAuction = asyncHandler(async (req, res) => {
     seller: req.user._id,
   });
 
-  res.status(200).send(newAuction);
+  // Updates the profile of the seller
+  const updatedProfile = await Profile.findByIdAndUpdate(
+    { _id: req.user._id },
+
+    {
+      $addToSet: {
+        sells: newAuction._id,
+      },
+    },
+
+    {
+      new: true,
+    }
+  );
+  const updatedInfo = {
+    newAuction,
+    updatedProfile,
+  };
+  res.status(200).send(updatedInfo);
 });
 
-// Gets specific bids
+// Make a BID
 // route /api/posts
-// access PUBLIC
+// access PRIVATE
+
+const bidOnAuction = asyncHandler(async (req, res) => {
+  console.log(req.params.id, req.user);
+
+  const auction = await Auction.findById(req.params.id);
+  const profile = await Profile.findById(req.user._id);
+
+  if (!auction || !profile) {
+    return res.status(400).send("auction not found");
+  }
+
+  const updatedAuction = await Auction.findByIdAndUpdate(
+    req.params.id,
+    {
+      cost: req.body.cost,
+      price: req.body.price,
+      currentHighestBidder: req.user._id,
+    },
+    {
+      new: true,
+    }
+  );
+
+  const updatedProfile = await Profile.findByIdAndUpdate(
+    { _id: req.user._id },
+
+    {
+      $addToSet: {
+        bids: req.params.id,
+      },
+    },
+
+    {
+      new: true,
+    }
+  );
+
+  const updatedInfo = {
+    updateAuction,
+    updatedProfile,
+  };
+
+  res.status(200).json(updatedInfo);
+});
 
 const uploadImage = asyncHandler(async (req, res, next) => {
   // var img = fs.readFileSync(req.file.path);
@@ -172,5 +235,5 @@ module.exports = {
   createAuction,
   updateAuction,
   uploadImage,
-  upload,
+  bidOnAuction,
 };

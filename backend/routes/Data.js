@@ -520,6 +520,10 @@ const data = [
     promoted: true,
     currentHighestBidder: 1234,
     seller: 645,
+    _id: "62af4a52cfae7ca8fb308928",
+    createdAt: "2022-06-19T16:09:54.830Z",
+    updatedAt: "2022-06-19T16:09:54.830Z",
+    __v: 0,
   },
   {
     id: 21,
