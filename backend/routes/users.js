@@ -10,7 +10,7 @@ const {
 
 router.route("/").get(createGuest).post(protect, getProfile);
 router.route("/login").post(loginUser, getProfile);
-router.route("/:id").put(protect, updateProfile);
+router.route("/:id").put(updateProfile);
 router.route("/login").post(createGuest);
 
 // router.route("/").post(updateGuest);

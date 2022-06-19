@@ -34,6 +34,10 @@ const auctionSchema = mongoose.Schema(
       type: String,
       require: [true, "Please add a text value"],
     },
+    location: {
+      type: String,
+      require: false,
+    },
     pic: {
       type: String,
       require: [true, "Please add a text value"],
@@ -48,6 +52,16 @@ const auctionSchema = mongoose.Schema(
     },
     pic4: {
       type: String,
+      require: false,
+    },
+    img1: {
+      data: Buffer,
+      contentType: String,
+      require: false,
+    },
+    img2: {
+      data: Buffer,
+      contentType: String,
       require: false,
     },
     km: {
