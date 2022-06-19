@@ -33,6 +33,11 @@ const getAllAuctions = asyncHandler(async (req, res) => {
   res.status(200).send(bids);
 });
 
+const createMultipleAuctions = asyncHandler(async (req, res) => {
+  Auction.insertMany(bidData);
+  res.json("it was a success?");
+});
+
 // Get All the Bids saved on the DataBase
 // route api/bids
 //access PUBLIC
@@ -247,4 +252,5 @@ module.exports = {
   uploadImage,
   bidOnAuction,
   getDataBaseAuctions,
+  createMultipleAuctions,
 };
