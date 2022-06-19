@@ -8,9 +8,11 @@ const {
   updateAuction,
   getAuction,
   bidOnAuction,
+  getDataBaseAuctions,
 } = require("../controllers/bidControl");
 const { protect } = require("../middleWare/authMiddleware");
 router.route("/").get(getAllAuctions).post(protect, createAuction);
+router.route("/all").get(getDataBaseAuctions);
 router
   .route("/:id")
   .get(getAuction)

@@ -3,6 +3,7 @@ const Auction = require("../models/AuctionModel");
 const Profile = require("../models/ProfileModel");
 const Image = require("../models/ImageModel");
 const bidData = require("../routes/Data");
+
 var multer = require("multer");
 const fs = require("fs");
 var bodyParser = require("body-parser");
@@ -28,6 +29,15 @@ let upload = multer({ storage: storage });
 
 const getAllAuctions = asyncHandler(async (req, res) => {
   const bids = bidData;
+
+  res.status(200).send(bids);
+});
+
+// Get All the Bids saved on the DataBase
+// route api/bids
+//access PUBLIC
+const getDataBaseAuctions = asyncHandler(async (req, res) => {
+  const bids = await Auction.find();
 
   res.status(200).send(bids);
 });
@@ -236,4 +246,5 @@ module.exports = {
   updateAuction,
   uploadImage,
   bidOnAuction,
+  getDataBaseAuctions,
 };
