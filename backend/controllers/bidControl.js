@@ -4,19 +4,22 @@ const Image = require("../models/ImageModel");
 const bidData = require("../routes/Data");
 var multer = require("multer");
 const fs = require("fs");
-const { nextTick } = require("process");
+var bodyParser = require("body-parser");
 
 // Multer
 const storage = multer.diskStorage({
   // destination: (req, file, cb) => {
   //   cb(null, "uploads");
   // },
-  destination: "uploads",
+  destination: (req, file, callback) => {
+    callback(null, "./frontend/auction-site/public/uploads");
+  },
   filename: (req, file, cb) => {
     cb(null, file.filename + "-" + Date.now());
   },
 });
-let upload = multer({ storage: storage }).single("testImage");
+let upload = multer({ storage: storage });
+// .single("testImage");
 
 // Gets all the bids
 // route /api/bids
@@ -98,6 +101,7 @@ const createAuction = asyncHandler(async (req, res) => {
     sold,
     promoted,
     currentHighestBidder,
+    seller: req.user._id,
   });
 
   res.status(200).send(newAuction);
@@ -124,24 +128,24 @@ const uploadImage = asyncHandler(async (req, res, next) => {
   //           res.send(final_img.image);
   //       }
   //   })
-  console.log("image upload called");
-  upload(req, res, (err) => {
-    upload(req, res, (err) => {
-      if (err) {
-        console.log(err);
-      } else {
-        const newImage = new Image({
-          name: req.body.name,
-          image: {
-            data: req.file.filename,
-            contentType: "image/png",
-          },
-        });
-        newImage.save();
-        res.send("success");
-      }
-    });
-  });
+  // console.log("image upload called");
+  // upload(req, res, (err) => {
+  //   upload(req, res, (err) => {
+  //     if (err) {
+  //       console.log(err);
+  //     } else {
+  //       const newImage = new Image({
+  //         name: req.body.name,
+  //         image: {
+  //           data: req.file.filename,
+  //           contentType: "image/png",
+  //         },
+  //       });
+  //       newImage.save();
+  //       res.send("success");
+  //     }
+  //   });
+  // });
 });
 
 const updateAuction = asyncHandler(async (req, res) => {
@@ -168,4 +172,5 @@ module.exports = {
   createAuction,
   updateAuction,
   uploadImage,
+  upload,
 };

@@ -57,13 +57,12 @@ const auctionSchema = mongoose.Schema(
     img1: {
       data: Buffer,
       contentType: String,
-      require: false,
     },
     img2: {
       data: Buffer,
       contentType: String,
-      require: false,
     },
+
     km: {
       type: Number,
       require: [true, "Please add a text value"],
@@ -93,6 +92,10 @@ const auctionSchema = mongoose.Schema(
       require: [true, "Please add a text value"],
     },
     color: {
+      type: String,
+      default: "blue",
+    },
+    seller: {
       type: String,
       default: "blue",
     },

@@ -20,6 +20,7 @@ const data = [
     classic: false,
     sold: false,
     promoted: true,
+    seller: 345,
     currentHighestBidder: 1234,
   },
   {
@@ -44,6 +45,7 @@ const data = [
     sold: false,
     promoted: true,
     currentHighestBidder: 1005,
+    seller: 345,
   },
   {
     id: 2,
@@ -68,6 +70,7 @@ const data = [
     sold: false,
     promoted: true,
     currentHighestBidder: 1234,
+    seller: 345,
   },
   {
     id: 3,
@@ -92,6 +95,7 @@ const data = [
     sold: false,
     promoted: true,
     currentHighestBidder: 1234,
+    seller: 845,
   },
   {
     id: 4,
@@ -116,6 +120,7 @@ const data = [
     sold: false,
     promoted: true,
     currentHighestBidder: 1224,
+    seller: 845,
   },
   {
     id: 5,
@@ -140,6 +145,7 @@ const data = [
     sold: false,
     promoted: true,
     currentHighestBidder: 1874,
+    seller: 845,
   },
   {
     id: 6,
@@ -164,6 +170,7 @@ const data = [
     sold: true,
     promoted: false,
     currentHighestBidder: 1934,
+    seller: 645,
   },
   {
     id: 7,
@@ -188,6 +195,7 @@ const data = [
     sold: true,
     promoted: false,
     currentHighestBidder: 1134,
+    seller: 645,
   },
   {
     id: 8,
@@ -212,6 +220,7 @@ const data = [
     sold: true,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 9,
@@ -236,6 +245,7 @@ const data = [
     sold: true,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 10,
@@ -284,6 +294,7 @@ const data = [
     sold: false,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 12,
@@ -308,6 +319,7 @@ const data = [
     sold: false,
     promoted: false,
     currentHighestBidder: 3334,
+    seller: 645,
   },
   {
     id: 13,
@@ -332,6 +344,7 @@ const data = [
     sold: false,
     promoted: false,
     currentHighestBidder: 9002,
+    seller: 645,
   },
   {
     id: 14,
@@ -356,6 +369,7 @@ const data = [
     sold: false,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 15,
@@ -368,6 +382,7 @@ const data = [
     hours: 17,
     km: 193,
     hrs: null,
+    location: "Orlando",
     pic: "https://www.mad4wheels.com/img/free-car-images/mobile/4057/volkswagen-lavida-2008-262567.jpg",
     pic2: "https://www.mad4wheels.com/img/free-car-images/mobile/4057/volkswagen-lavida-2008-262568.jpg",
     pic3: null,
@@ -379,6 +394,7 @@ const data = [
     sold: false,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 16,
@@ -390,6 +406,7 @@ const data = [
     days: 02,
     hours: 11,
     km: 132,
+    location: "Boston",
     hrs: null,
     pic: "https://upload.wikimedia.org/wikipedia/commons/6/6d/2017_Honda_Civic_SR_VTEC_1.0_Front.jpg",
     pic2: "https://upload.wikimedia.org/wikipedia/commons/6/6d/2017_Honda_Civic_SR_VTEC_1.0_Front.jpg",
@@ -402,6 +419,7 @@ const data = [
     sold: false,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 17,
@@ -413,6 +431,7 @@ const data = [
     days: 02,
     hours: 22,
     km: 202,
+    location: "Sacramento",
     hrs: null,
     pic: "https://cdn.pixabay.com/photo/2020/06/04/19/44/chevy-5260229_960_720.jpg",
     pic2: "https://cdn.ebizautos.media/used-2016-chevrolet-malibu-4drsedanpremierw2lz-13706-19230268-1-640.jpg",
@@ -425,6 +444,7 @@ const data = [
     sold: false,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 18,
@@ -436,6 +456,7 @@ const data = [
     days: 0,
     hours: 0,
     km: 212,
+    location: "Los Angeles",
     hrs: null,
     pic: "https://cdn.hibid.com/img.axd?id=4147686407&wid=&rwl=false&p=&ext=&w=0&h=0&t=&lp=&c=true&wt=false&sz=MAX&checksum=8j1psqGU4EHq5%2F7HeShZwqdQYqyg4grU",
     pic2: "https://www.carspecs.us/photos/18f2308bdcb6bfaba85755b4a4940521a9aef0f7-2000.jpg",
@@ -448,6 +469,7 @@ const data = [
     sold: true,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 19,
@@ -460,6 +482,7 @@ const data = [
     hours: 0,
     km: 212,
     hrs: null,
+    location: "Dallas",
     pic: "https://www.motortrend.com/uploads/sites/11/2020/08/1993-Mazda-RX-7-front-three-quarter.jpg",
     pic2: "https://www.motorious.com/content/images/2020/08/1993-Mazda-RX-7-2.jpg",
     pic3: null,
@@ -471,6 +494,7 @@ const data = [
     sold: true,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 20,
@@ -483,6 +507,7 @@ const data = [
     hours: 10,
     km: 102,
     hrs: null,
+    location: "San Diego",
     pic: "https://www.gannett-cdn.com/presto/2019/06/25/PDTF/92571e45-5097-42f7-8379-07a3bea1d3e0-2020_Ford_F250_Super_Duty_Tremor.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp",
     pic2: "https://www.gannett-cdn.com/presto/2019/06/25/PDTF/3d5f6917-a4ee-4cc3-a24d-3aaf9ed00037-2020_Ford_F250_Super_Duty_Tremor_2.jpg?width=660&height=440&fit=crop&format=pjpg&auto=webp",
     pic3: "",
@@ -494,6 +519,7 @@ const data = [
     sold: false,
     promoted: true,
     currentHighestBidder: 1234,
+    seller: 645,
   },
   {
     id: 21,
@@ -506,6 +532,7 @@ const data = [
     hours: 19,
     km: 205,
     hrs: null,
+    location: "Atlanta",
     pic: "https://i.ytimg.com/vi/Vu2TzFe2-Bo/hqdefault.jpg",
     pic2: "https://i.ytimg.com/vi/Vu2TzFe2-Bo/hqdefault.jpg",
     pic3: "",
@@ -517,6 +544,7 @@ const data = [
     sold: true,
     promoted: true,
     currentHighestBidder: 1234,
+    seller: 645,
   },
 ];
 
