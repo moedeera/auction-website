@@ -124,11 +124,26 @@ const registerUser = asyncHandler(async (req, res) => {
     email,
     password: hashedPassword,
   });
+  //create new Profile
+  const newUserProfile = await Profile.create({
+    user: name,
+    username: name,
+    email: email,
+    location: "NA",
+    card: true,
+    verified: true,
+    picture:
+      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    bids: [],
+    sells: [],
 
-  if (newUser) {
-    return res.status(200).json(newUser);
+    status: "public",
+  });
+
+  if (newUser || newUserProfile) {
+    return res.status(200).json({ newUser, newUserProfile });
   } else {
-    return res.status(400).json("fail to register");
+    return res.status(400).json("failed to register");
   }
 });
 // desc
