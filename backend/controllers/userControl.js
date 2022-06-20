@@ -98,6 +98,39 @@ const loginUser = asyncHandler(async (req, res, next) => {
     res.send("access denied");
   }
 });
+// route /api/login
+// access PUBLIC
+//LOGS IN A USER
+const registerUser = asyncHandler(async (req, res) => {
+  const { name, email, password } = req.body;
+
+  if (!name || !email || !password) {
+    return res.json("Incomplete submission");
+  }
+
+  // Check if user exists
+  const userExists = await User.findOne({ email });
+
+  if (userExists) {
+    return res.status(400).json("Incomplete submission");
+  }
+
+  const salt = await bcrypt.genSalt(10);
+  const hashedPassword = await bcrypt.hash(req.body.password, salt);
+
+  // Create new User
+  const newUser = await User.create({
+    name,
+    email,
+    password: hashedPassword,
+  });
+
+  if (newUser) {
+    return res.status(200).json(newUser);
+  } else {
+    return res.status(400).json("fail to register");
+  }
+});
 // desc
 // route /api/guest
 // access PUBLIC
@@ -142,4 +175,5 @@ module.exports = {
   getProfile,
   updateProfile,
   loginUser,
+  registerUser,
 };

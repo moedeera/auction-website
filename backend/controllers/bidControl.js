@@ -34,8 +34,9 @@ const getAllAuctions = asyncHandler(async (req, res) => {
 });
 
 const createMultipleAuctions = asyncHandler(async (req, res) => {
+  console.log(bidData);
   Auction.insertMany(bidData);
-  res.json("it was a success?");
+  res.json(bidData);
 });
 
 // Get All the Bids saved on the DataBase
@@ -182,7 +183,7 @@ const bidOnAuction = asyncHandler(async (req, res) => {
   );
 
   const updatedInfo = {
-    updateAuction,
+    updatedAuction,
     updatedProfile,
   };
 

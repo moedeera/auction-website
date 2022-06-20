@@ -22,6 +22,7 @@ const data = [
     promoted: true,
     seller: "62ae321155e7594aeb635ab2",
     currentHighestBidder: 1234,
+    minimumBid: 18000,
   },
   {
     id: 1,
@@ -46,6 +47,7 @@ const data = [
     promoted: true,
     currentHighestBidder: 1005,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 18000,
   },
   {
     id: 2,
@@ -71,6 +73,7 @@ const data = [
     promoted: true,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 3,
@@ -96,6 +99,7 @@ const data = [
     promoted: true,
     currentHighestBidder: 1234,
     seller: 845,
+    minimumBid: 8000,
   },
   {
     id: 4,
@@ -121,6 +125,7 @@ const data = [
     promoted: true,
     currentHighestBidder: 1224,
     seller: 845,
+    minimumBid: 2000,
   },
   {
     id: 5,
@@ -146,6 +151,7 @@ const data = [
     promoted: true,
     currentHighestBidder: 1874,
     seller: 845,
+    minimumBid: 18000,
   },
   {
     id: 6,
@@ -171,6 +177,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1934,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 2000,
   },
   {
     id: 7,
@@ -196,6 +203,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1134,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 15000,
   },
   {
     id: 8,
@@ -221,6 +229,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 16000,
   },
   {
     id: 9,
@@ -246,6 +255,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 28000,
   },
   {
     id: 10,
@@ -270,6 +280,8 @@ const data = [
     sold: false,
     promoted: false,
     currentHighestBidder: 1234,
+    seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 11,
@@ -295,6 +307,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 12,
@@ -320,6 +333,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 3334,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 13,
@@ -345,6 +359,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 9002,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 14,
@@ -370,6 +385,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 15,
@@ -395,6 +411,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 16,
@@ -420,6 +437,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 17,
@@ -445,6 +463,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 18,
@@ -470,6 +489,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 19,
@@ -495,6 +515,7 @@ const data = [
     promoted: false,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
   {
     id: 20,
@@ -520,10 +541,7 @@ const data = [
     promoted: true,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
-    _id: "62af4a52cfae7ca8fb308928",
-    createdAt: "2022-06-19T16:09:54.830Z",
-    updatedAt: "2022-06-19T16:09:54.830Z",
-    __v: 0,
+    minimumBid: 8000,
   },
   {
     id: 21,
@@ -549,6 +567,7 @@ const data = [
     promoted: true,
     currentHighestBidder: 1234,
     seller: "62ae321155e7594aeb635ab2",
+    minimumBid: 8000,
   },
 ];
 

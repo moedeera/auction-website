@@ -6,12 +6,14 @@ const {
   createGuest,
   getProfile,
   loginUser,
+  registerUser,
 } = require("../controllers/userControl");
 
 router.route("/").get(createGuest).post(protect, getProfile);
 router.route("/login").post(loginUser, getProfile);
 router.route("/:id").put(updateProfile);
 router.route("/login").post(createGuest);
+router.route("/register").post(registerUser);
 
 // router.route("/").post(updateGuest);
 
