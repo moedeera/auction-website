@@ -245,10 +245,37 @@ const updateAuction = asyncHandler(async (req, res) => {
   res.status(200).send(updatedAuction);
 });
 
+//Delete AUCTION
+const deleteAuction = asyncHandler(async (req, res) => {
+  const auction = await Auction.findById(req.params.id);
+
+  if (!auction) {
+    res.status(400);
+    return res.status(401).send("auction not found");
+  }
+
+  // Check for user
+  if (!req.user) {
+    res.status(401);
+    return res.status(401).send("user not found");
+  }
+
+  // Make sure the logged in user matches the goal user
+  if (auction.user.toString() !== req.user.id) {
+    res.status(401);
+    return res.status(401).send("not found");
+  }
+
+  await auction.remove();
+
+  res.status(200).json({ id: req.params.id });
+});
+
 module.exports = {
   getAllAuctions,
   getAuction,
   createAuction,
+  deleteAuction,
   updateAuction,
   uploadImage,
   bidOnAuction,

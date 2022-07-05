@@ -5,6 +5,7 @@ const router = express.Router();
 const {
   getAllAuctions,
   createAuction,
+  deleteAuction,
   updateAuction,
   getAuction,
   bidOnAuction,
@@ -18,6 +19,7 @@ router
   .route("/:id")
   .get(getAuction)
   .put(updateAuction)
+  .delete(deleteAuction)
   .post(protect, bidOnAuction);
 
 // router.route("/image").post(uploadImage);
