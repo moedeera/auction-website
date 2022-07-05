@@ -19,7 +19,7 @@ router
   .route("/:id")
   .get(getAuction)
   .put(updateAuction)
-  .delete(deleteAuction)
+  .delete(protect, deleteAuction)
   .post(protect, bidOnAuction);
 
 // router.route("/image").post(uploadImage);

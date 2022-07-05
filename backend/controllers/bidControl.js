@@ -261,7 +261,7 @@ const deleteAuction = asyncHandler(async (req, res) => {
   }
 
   // Make sure the logged in user matches the goal user
-  if (auction.user.toString() !== req.user.id) {
+  if (auction.seller.toString() !== req.user.id) {
     res.status(401);
     return res.status(401).send("not found");
   }
