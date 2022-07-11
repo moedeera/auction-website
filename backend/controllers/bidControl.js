@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const Auction = require("../models/AuctionModel");
 const Profile = require("../models/ProfileModel");
+const Message = require("../models/MessageModel");
 const Image = require("../models/ImageModel");
 const bidData = require("../routes/Data");
 
@@ -244,7 +245,6 @@ const updateAuction = asyncHandler(async (req, res) => {
 
   res.status(200).send(updatedAuction);
 });
-
 //Delete AUCTION
 const deleteAuction = asyncHandler(async (req, res) => {
   const auction = await Auction.findById(req.params.id);
@@ -271,6 +271,36 @@ const deleteAuction = asyncHandler(async (req, res) => {
   res.status(200).json({ id: req.params.id });
 });
 
+// Send a Message
+// route /api/posts
+// access PUBLIC
+const sendMessage = asyncHandler(async (req, res) => {
+  console.log("message sent");
+
+  console.log(req.body.image);
+  const { name, email, message } = req.body;
+
+  try {
+    const newMessage = await Message.create({
+      name,
+      email,
+      message,
+    });
+
+    res.status(200).send(newMessage);
+  } catch (error) {
+    console.log(error);
+  }
+});
+// Send a Message
+// route /api/posts
+// access PUBLIC
+const fetchMessages = asyncHandler(async (req, res) => {
+  const messages = await Message.find();
+
+  res.status(200).send(messages);
+});
+
 module.exports = {
   getAllAuctions,
   getAuction,
@@ -281,4 +311,6 @@ module.exports = {
   bidOnAuction,
   getDataBaseAuctions,
   createMultipleAuctions,
+  sendMessage,
+  fetchMessages,
 };
